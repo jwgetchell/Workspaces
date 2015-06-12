@@ -1,0 +1,49 @@
+// AxPicBox.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (AxPicBox.tlb) that will become a resource in
+// AxPicBox.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(22D47DFB-88A4-433E-9986-BC5676DAD6D5), version(1.0),
+  control ]
+library AxPicBoxLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CAxPicBoxCtrl
+	[ 
+		uuid(08F304C5-9192-4E5A-B0C0-507EDEDD15D0)	
+	]
+	dispinterface _DAxPicBox
+	{
+		properties:
+		methods:
+	};
+
+	//  Event dispatch interface for CAxPicBoxCtrl
+
+	[ 
+		uuid(68EBBACB-DACE-494E-9DC9-26E1FB511178)	
+	]
+	dispinterface _DAxPicBoxEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CAxPicBoxCtrl
+	[
+		uuid(4CD52A19-D4A8-4431-8CAB-0C2799827874)
+	]
+	coclass AxPicBox
+	{
+		[default] dispinterface _DAxPicBox;
+		[default, source] dispinterface _DAxPicBoxEvents;
+	};
+
+};

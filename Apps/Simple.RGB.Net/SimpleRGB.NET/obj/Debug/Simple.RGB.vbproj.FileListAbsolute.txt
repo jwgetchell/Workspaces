@@ -1,0 +1,2 @@
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces\Apps\Simple.RGB.Net\SimpleRGB.NET\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces\Apps\Simple.RGB.Net\SimpleRGB.NET\obj\Debug\Simple.RGB.vbproj.ResolveComReference.cache

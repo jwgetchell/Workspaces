@@ -1,0 +1,12 @@
+ucALSusb = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+dllCallBackFunction = 0, 0, 0, 0, C
+modGeneric = 0, 0, 0, 0, C
+modHID = 0, 0, 0, 0, C
+modHIDusb = 0, 0, 0, 0, C
+usJungoUsb = 0, 0, 0, 0, C
+wdutils_dll = 0, 0, 0, 0, C
+windrvr = 0, 0, 0, 0, C
+ucEmuUsb = 0, 0, 0, 0, C
+ucHIDUsb = 0, 0, 0, 0, C
+ucJungoUsb = 0, 0, 0, 0, C
+ADBUsb = 0, 0, 0, 0, C

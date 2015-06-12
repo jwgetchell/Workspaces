@@ -1,0 +1,36 @@
+Type=Exe
+Form=frm\frmPlot.frm
+Object={F4C2E9F8-83B3-4E41-A8DA-F9CB058054AF}#3.0#0; plotUserControl.ocx
+IconForm="frmPlot"
+Startup="frmPlot"
+HelpFile=""
+ExeName32="test.exe"
+Path32="..\bin"
+Command32=""
+Name="test"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="IntersilPC image 02/27/09"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1

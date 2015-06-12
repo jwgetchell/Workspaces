@@ -1,0 +1,94 @@
+Folder PATH listing
+Volume serial number is 0006EFC4 B09B:4E79
+C:.
+|   files.txt
+|   ISL29177.sln
+|   
++---IntersilLib
+|   |   CommonPInvoke.cs
+|   |   CustomException.cs
+|   |   GlobalVariables.cs
+|   |   HIDClass.cs
+|   |   HIDDeviceIO.cs
+|   |   IntersilLib.csproj
+|   |   IntersilLib.csproj.user
+|   |   ModHID.cs
+|   |   
+|   \---Properties
+|           AssemblyInfo.cs
+|           
+\---ISL29177
+    |   AboutUs.cs
+    |   AboutUs.Designer.cs
+    |   AboutUs.resx
+    |   AdvanceConfig.cs
+    |   AdvanceConfig.Designer.cs
+    |   AdvanceConfig.resx
+    |   App.config
+    |   app.manifest
+    |   Config.ini
+    |   EnggiMode.cs
+    |   EnggiMode.Designer.cs
+    |   EnggiMode.resx
+    |   File.cs
+    |   Fileread.cs
+    |   help_ISL29177.html
+    |   ISL29177.csproj
+    |   ISL29177_Help.cs
+    |   ISL29177_Help.Designer.cs
+    |   ISL29177_Help.resx
+    |   MainScreen.cs
+    |   MainScreen.Designer.cs
+    |   MainScreen.resx
+    |   path.txt
+    |   Program.cs
+    |   StartUpForm.cs
+    |   StartUpForm.Designer.cs
+    |   StartUpForm.resx
+    |   
+    +---Image
+    |       back.png
+    |       close.png
+    |       connected_icon.png
+    |       connected_icon.png.part
+    |       exit.png
+    |       Home.png
+    |       ic_launcher-web.ico
+    |       images.jpg
+    |       intersil.png
+    |       logo.png
+    |       play.png
+    |       SplashScreen.png
+    |       stop.png
+    |       stop2.png
+    |       StoreLogo.png
+    |       usb.png
+    |       usb_blue.png
+    |       warning.ico
+    |       
+    +---Properties
+    |       AssemblyInfo.cs
+    |       Resources.Designer.cs
+    |       Resources.resx
+    |       Settings.Designer.cs
+    |       Settings.settings
+    |       
+    +---Repository
+    |       CheckDevice.cs
+    |       CommonUtility.cs
+    |       CustomeEx.cs
+    |       StartReadingUtil.cs
+    |       
+    +---Repository1
+    |       CheckDevice.cs
+    |       CommonUtility.cs
+    |       CustomeEx.cs
+    |       StartReadingUtil.cs
+    |       
+    \---Resources
+            Close.bmp
+            close.png
+            Collapse.png
+            connected_icon.png
+            Expand.png
+            

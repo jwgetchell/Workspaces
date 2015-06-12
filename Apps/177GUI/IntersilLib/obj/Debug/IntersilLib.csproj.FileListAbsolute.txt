@@ -1,0 +1,5 @@
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Apps\177GUI\IntersilLib\bin\Debug\IntersilLib.dll
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Apps\177GUI\IntersilLib\bin\Debug\IntersilLib.pdb
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Apps\177GUI\IntersilLib\obj\Debug\IntersilLib.dll
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Apps\177GUI\IntersilLib\obj\Debug\IntersilLib.pdb
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Apps\177GUI\IntersilLib\obj\Debug\IntersilLib.csprojResolveAssemblyReference.cache

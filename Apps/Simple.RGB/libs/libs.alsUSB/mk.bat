@@ -1,0 +1,1 @@
+"C:\Program Files\Microsoft Visual Studio\VB98\vb6" /m alsUSB.vbp

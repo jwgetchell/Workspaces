@@ -1,0 +1,6 @@
+Line 878: Class alsUSBCtl.ucALSusb of control ucALSusb1 was not a loaded control class.
+Line 884: Property Font in ucALSusb1 had an invalid value.
+Line 885: The property name Location in ucALSusb1 is invalid.
+Line 886: The property name Name in ucALSusb1 is invalid.
+Line 887: The property name Size in ucALSusb1 is invalid.
+Line 888: The property name Object.TabIndex in ucALSusb1 is invalid.

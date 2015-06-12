@@ -1,0 +1,1 @@
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Libs\thorlabsAPT.NET\obj\Debug\Interop.BASICFORMATTEDIOLib.dll

@@ -1,0 +1,10 @@
+ucMonochromator = 17, 56, 697, 718, , 26, 26, 657, 566, C
+modGpibComDefs = 0, 0, 0, 0, C
+clsGPIB = 0, 0, 0, 0, C
+clsHPIB = 0, 0, 0, 0, C
+clsNIGPIB = 0, 0, 0, 0, C
+clsProLogix = 0, 0, 0, 0, C
+clsChromaMeter = 0, 0, 0, 0, C
+clsPowerMeter = 0, 0, 0, 0, C
+clsLuxMeter = 0, 0, 0, 0, C
+clsDVM = 0, 0, 0, 0, C

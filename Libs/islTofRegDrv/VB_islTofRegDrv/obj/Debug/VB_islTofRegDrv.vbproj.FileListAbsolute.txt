@@ -1,0 +1,9 @@
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\output\Debug\bin\VB_islTofRegDrv.dll
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\output\Debug\bin\VB_islTofRegDrv.pdb
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\output\Debug\bin\VB_islTofRegDrv.xml
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\output\Debug\bin\VB_islTofRegDrv.tlb
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Libs\islTofRegDrv\VB_islTofRegDrv\obj\Debug\VB_islTofRegDrv.Resources.resources
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Libs\islTofRegDrv\VB_islTofRegDrv\obj\Debug\VB_islTofRegDrv.vbproj.GenerateResource.Cache
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Libs\islTofRegDrv\VB_islTofRegDrv\obj\Debug\VB_islTofRegDrv.dll
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Libs\islTofRegDrv\VB_islTofRegDrv\obj\Debug\VB_islTofRegDrv.xml
+C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces.devel\Libs\islTofRegDrv\VB_islTofRegDrv\obj\Debug\VB_islTofRegDrv.pdb

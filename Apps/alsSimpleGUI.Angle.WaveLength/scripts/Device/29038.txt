@@ -1,0 +1,14 @@
+# C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces\Apps\alsSimpleGUI.Angle.WaveLength\
+# scripts\Devices\29038.txt
+
+# App Msg Running 29038.txt
+
+Als Address 88
+Als Part ISL29038
+Als EnableProx 1
+# Als Poll 1
+Als Range 125
+Als Irdr 220
+Als Sleep 12
+# Als ProxOffset 10
+

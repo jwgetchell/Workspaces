@@ -1,0 +1,14 @@
+# C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces\Apps\alsSimpleGUI.Angle.WaveLength\
+# scripts\Tests\alsComp.txt
+
+# App Msg Running proximityAR.txt
+
+App ViewIns
+App ViewTests
+Als Range 2000
+
+Plot Nplots 1
+Plot 0
+Plot Col 3
+
+Ins Gpib Prologix

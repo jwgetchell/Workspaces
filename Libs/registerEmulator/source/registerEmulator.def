@@ -1,0 +1,7 @@
+LIBRARY      "registerEmulator"
+
+EXPORTS
+
+cSetDevice
+cDrvApi
+cSetData   

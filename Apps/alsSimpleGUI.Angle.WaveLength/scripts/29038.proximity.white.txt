@@ -1,0 +1,9 @@
+# C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces\Apps\alsSimpleGUI.Angle.WaveLength\
+# scripts\29038.proximity.txt
+
+App Script Device\29038.txt
+App Script Tests\proximity.txt
+Plot FileOpen DataTemplate\swept.proximity.0-160.2.xlsm
+ThorlabsAPT Stop 160
+ThorlabsAPT Step 2
+# App Msg Ready to Run

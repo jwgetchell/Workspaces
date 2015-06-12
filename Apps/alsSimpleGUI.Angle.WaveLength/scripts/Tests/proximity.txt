@@ -1,0 +1,23 @@
+# C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces\Apps\alsSimpleGUI.Angle.WaveLength\
+# scripts\Tests\proximity.txt
+
+# App Msg Running proximity.txt
+
+Plot Nplots 4
+Plot 0
+Plot Input Prox
+
+App IrdrCycle 1
+
+App TmrOff 1
+
+# App Sweep mm
+
+# App Msg Wait for Thorlabs Init
+# ThorlabsAPT Controllers APT
+# ThorlabsAPT 0
+# ThorlabsAPT Sn 45821356
+# ThorlabsAPT Stop 160
+# ThorlabsAPT FastSweep 1
+# ThorlabsAPT Arm
+

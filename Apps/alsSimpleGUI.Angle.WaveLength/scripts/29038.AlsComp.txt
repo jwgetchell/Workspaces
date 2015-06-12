@@ -1,0 +1,7 @@
+# C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces\Apps\alsSimpleGUI.Angle.WaveLength\
+# scripts\29038.alsComp.txt
+
+App Script Device\29038.txt
+App Script Tests\alsComp.txt
+Plot FileOpen DataTemplate\Test.GlassComp.Results.xlsx
+# App Msg Ready to Run

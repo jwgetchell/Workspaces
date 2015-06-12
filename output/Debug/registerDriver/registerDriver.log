@@ -1,0 +1,140 @@
+﻿Build started 6/12/2015 11:57:33 AM.
+     1>Project "C:\Users\jgetchel\Documents\Workspaces.devel\Libs\registerDriver\registerDriver.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"C:\Users\jgetchel\Documents\Workspaces.devel\output\Debug\registerDriver\registerDriver.pch" /Fo"C:\Users\jgetchel\Documents\Workspaces.devel\output\Debug\registerDriver\\" /Fd"C:\Users\jgetchel\Documents\Workspaces.devel\output\Debug\registerDriver\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt source\ALSbaseClass.cpp source\ISL29011.cpp source\ISL29020.cpp source\ISL29023.cpp source\ISL29025.cpp source\ISL29028.cpp source\ISL29028.jdsu.cpp source\ISL29030.cpp source\ISL29032.cpp source\ISL29033.cpp source\ISL29035.cpp source\ISL29036.cpp source\ISL29038.cpp source\ISL29120.cpp source\ISL29125.cpp source\ISL29147.cpp source\ISL29177.cpp source\ISL29200.cpp source\ISL58334.cpp source\TSL2771.cpp source\alsPrxI2cIo.cpp source\avgStats.cpp source\cApi.cpp source\resMgr.cpp source\stateMachine.cpp source\test.cpp
+         test.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\test.cpp(48): error C3861: 'GetTickCount': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\test.cpp(50): error C3861: 'GetTickCount': identifier not found
+         stateMachine.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+         resMgr.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\resmgr.cpp(134): error C3861: 'strcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\resmgr.cpp(135): error C3861: 'strlen': identifier not found
+         >>>>>>>>>>> JWG: CresourceManager::detectDevice <<<<<<<<<<<<<<
+         cApi.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+         avgStats.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\avgstats.cpp(43): warning C4245: 'initializing': conversion from 'int' to 'uw', signed/unsigned mismatch
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\avgstats.cpp(70): error C3861: 'memset': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\avgstats.cpp(71): error C3861: 'memset': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\avgstats.cpp(96): error C3861: 'memset': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\avgstats.cpp(110): error C3861: 'memset': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\avgstats.cpp(111): error C3861: 'memset': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\avgstats.cpp(119): error C3861: 'memset': identifier not found
+         alsPrxI2cIo.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxi2cio.cpp(41): error C3861: 'memset': identifier not found
+         TSL2771.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(102): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(102): error C2146: syntax error: missing ';' before identifier 'CfunctionList'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(102): warning C4458: declaration of 'm_regTable' hides class member
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(143): note: see declaration of 'CalsBase::m_regTable'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(102): error C2512: 'CalsBase::CfunctionList': no appropriate default constructor available
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(160): note: see declaration of 'CalsBase::CfunctionList'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(173): error C3861: 'strcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(174): error C3861: 'strlen': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(179): error C3861: 'strcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(180): error C3861: 'strlen': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(191): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(278): error C3861: 'memcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\tsl2771.cpp(585): error C3861: 'memcpy': identifier not found
+         ISL58334.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+         >>>>>>>>>>> JWG: Cisl58334::detectDevice <<<<<<<<<<<<<<
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(238): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(238): error C2146: syntax error: missing ';' before identifier 'CfunctionList'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(238): warning C4458: declaration of 'm_regTable' hides class member
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(143): note: see declaration of 'CalsBase::m_regTable'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(238): error C2512: 'CalsBase::CfunctionList': no appropriate default constructor available
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(160): note: see declaration of 'CalsBase::CfunctionList'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(446): error C3861: 'memcpy': identifier not found
+         JWG:Cisl58334::getDataStats
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(751): error C3861: 'memcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(862): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(862): error C2146: syntax error: missing ';' before identifier 'CstateMachine'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(863): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(863): error C2143: syntax error: missing ';' before 'CstateMachine::Cstate'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(863): error C2143: syntax error: missing ';' before '['
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(863): error C2337: 'tblSz': attribute not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(864): error C3861: 'memcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(914): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(914): error C2146: syntax error: missing ';' before identifier 'CstateMachine'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(915): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(915): error C2143: syntax error: missing ';' before 'CstateMachine::Cstate'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(915): error C2143: syntax error: missing ';' before '['
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(915): error C2337: 'tblSz': attribute not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(916): error C3861: 'memcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(972): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(972): error C2146: syntax error: missing ';' before identifier 'CstateMachine'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(973): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(973): error C2143: syntax error: missing ';' before 'CstateMachine::Cstate'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(973): error C2143: syntax error: missing ';' before '['
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(973): error C2337: 'tblSz': attribute not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl58334.cpp(974): error C3861: 'memcpy': identifier not found
+         ISL29200.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29200.cpp(83): error C3861: 'memcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29200.cpp(164): error C3861: 'memcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29200.cpp(236): error C3861: 'memcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29200.cpp(391): error C3861: 'memcpy': identifier not found
+         ISL29177.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29177.cpp(257): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29177.cpp(257): error C2146: syntax error: missing ';' before identifier 'CfunctionList'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29177.cpp(257): warning C4458: declaration of 'm_regTable' hides class member
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(143): note: see declaration of 'CalsBase::m_regTable'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29177.cpp(257): error C2512: 'CalsBase::CfunctionList': no appropriate default constructor available
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(160): note: see declaration of 'CalsBase::CfunctionList'
+         ISL29147.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+         ISL29125.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+         >>>>>>>>>>> JWG: Cisl29125::detectDevice <<<<<<<<<<<<<<
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29125.cpp(158): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29125.cpp(158): error C2146: syntax error: missing ';' before identifier 'CfunctionList'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29125.cpp(158): warning C4458: declaration of 'm_regTable' hides class member
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(143): note: see declaration of 'CalsBase::m_regTable'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29125.cpp(158): error C2512: 'CalsBase::CfunctionList': no appropriate default constructor available
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(160): note: see declaration of 'CalsBase::CfunctionList'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29125.cpp(457): error C3861: 'memcpy': identifier not found
+         JWG:Cisl29125::getDataStats
+         ISL29120.cpp
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(259): warning C4459: declaration of 'pDrvApi' hides global declaration
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsprxtypes.h(80): note: see declaration of 'pDrvApi'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(79): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(79): error C2146: syntax error: missing ';' before identifier 'CfunctionList'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(79): warning C4458: declaration of 'm_regTable' hides class member
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(143): note: see declaration of 'CalsBase::m_regTable'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(79): error C2512: 'CalsBase::CfunctionList': no appropriate default constructor available
+         c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\alsbaseclass.h(160): note: see declaration of 'CalsBase::CfunctionList'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(152): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(152): error C2146: syntax error: missing ')' before identifier 'CstateMachine'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(155): error C2065: 'DEBUG_NEW': undeclared identifier
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(155): error C2059: syntax error: 'CstateMachine::Cstate'
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(158): error C3861: 'memcpy': identifier not found
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(201): warning C4390: ';': empty controlled statement found; is this the intent?
+     1>c:\users\jgetchel\documents\workspaces.devel\libs\registerdriver\source\isl29120.cpp(155): fatal error C1903: unable to recover from previous error(s); stopping compilation
+         INTERNAL COMPILER ERROR in 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe'
+             Please choose the Technical Support command on the Visual C++
+             Help menu, or open the Technical Support help file for more information
+     1>Done Building Project "C:\Users\jgetchel\Documents\Workspaces.devel\Libs\registerDriver\registerDriver.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.64

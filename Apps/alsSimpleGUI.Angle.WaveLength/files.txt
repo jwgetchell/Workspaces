@@ -1,0 +1,737 @@
+Folder PATH listing
+Volume serial number is 0041002E A876:7CB5
+C:.
++---bas
++---cls
++---ctl
++---doc
++---frm
++---installer
++---ISLEEprom
++---libs.alsUSB
+|   +---bas
+|   +---cls
+|   +---ctl
+|   +---frm
+|   \---installer
++---libs.monochromator
+|   +---bas
+|   +---cls
+|   +---ctl
+|   +---frm
+|   \---installer
++---libs.npXps
+|   +---ctl
+|   +---drivers.dll
+|   \---frm
++---libs.plot
+|   +---bas
+|   +---ctl
+|   \---frm
++---libs.thorLabsAPT
+|   +---bas
+|   +---ctl
+|   +---frm
+|   \---installer
++---README_files
+\---scripts
+    +---DataTemplate
+    |   \---test.conditions.device.rev
+    |       +---alsCompSpectra
+    |       +---alsResponse
+    |       +---experiments
+    |       +---Nikhil_droopUp
+    |       +---Palette
+    |       +---phone
+    |       |   +---HTC-38-C3LF
+    |       |   \---HTC-38-C5JDSU
+    |       |       \---New Folder
+    |       +---processed
+    |       |   +---alsComp
+    |       |   |   \---notIncluded
+    |       |   +---alsResponse
+    |       |   +---proxAR.sleep12.220ma.29038
+    |       |   +---proxArTrim
+    |       |   +---swept.proximity.range.C3,5,30
+    |       |   +---swept.proximity.range.greyCard
+    |       |   \---swept.proximity.targets.C4
+    |       +---proxRange
+    |       +---samples
+    |       +---swept.proximity
+    |       +---swept.proximity.29038.barrier,offset
+    |       \---TMD2771
+    +---Device
+    \---Tests
+     100 files
+     200 files
+     300 files
+     368 text files.
+classified 257 files
+Duplicate file check 257 files (212 known unique)
+Unique:      100 files                                          
+Unique:      200 files                                          
+     244 unique files.                              
+Counting:  100
+Counting:  200
+     269 files ignored.
+
+http://cloc.sourceforge.net v 1.55  T=3.0 s (33.0 files/s, 10732.7 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Visual Basic                    62           2461           6801           9401
+C++                              3           1522           3345           5622
+C/C++ Header                     4             12             16            349
+HTML                             2             73           1979            257
+Teamcenter def                   1              0              0            225
+DOS Batch                       25             36              0             91
+XML                              2              0              0              8
+-------------------------------------------------------------------------------
+SUM:                            99           4104          12141          15953
+-------------------------------------------------------------------------------
+___ 
+BAS 
+      14 text files.
+classified 11 files
+      11 unique files.                              
+       6 files ignored.
+
+http://cloc.sourceforge.net v 1.55  T=0.5 s (16.0 files/s, 3096.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Visual Basic                     8            100             28           1420
+-------------------------------------------------------------------------------
+SUM:                             8            100             28           1420
+-------------------------------------------------------------------------------
+___ 
+CLS 
+      19 text files.
+classified 16 files
+      16 unique files.                              
+       6 files ignored.
+
+http://cloc.sourceforge.net v 1.55  T=0.5 s (26.0 files/s, 4914.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Visual Basic                    13            679            276           1502
+-------------------------------------------------------------------------------
+SUM:                            13            679            276           1502
+-------------------------------------------------------------------------------
+___ 
+FRM 
+      17 text files.
+classified 14 files
+      14 unique files.                              
+       7 files ignored.
+
+http://cloc.sourceforge.net v 1.55  T=1.0 s (10.0 files/s, 7844.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Visual Basic                    10            764           4745           2335
+-------------------------------------------------------------------------------
+SUM:                            10            764           4745           2335
+-------------------------------------------------------------------------------
+___________ 
+LIBS.ALSUSB 
+      56 text files.
+classified 38 files
+      36 unique files.                              
+      38 files ignored.
+
+http://cloc.sourceforge.net v 1.55  T=0.5 s (36.0 files/s, 8968.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Visual Basic                    14            634           1017           2823
+DOS Batch                        4              3              0              7
+-------------------------------------------------------------------------------
+SUM:                            18            637           1017           2830
+-------------------------------------------------------------------------------
+__________________ 
+LIBS.MONOCHROMATOR 
+      54 text files.
+classified 36 files
+      34 unique files.                              
+      43 files ignored.
+
+http://cloc.sourceforge.net v 1.55  T=0.5 s (22.0 files/s, 3024.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Visual Basic                     6             55             92            216
+HTML                             1             26           1033             79
+DOS Batch                        4              3              0              8
+-------------------------------------------------------------------------------
+SUM:                            11             84           1125            303
+-------------------------------------------------------------------------------
+__________ 
+LIBS.NPXPS 
+      37 text files.
+classified 25 files
+      24 unique files.                              
+      25 files ignored.
+
+http://cloc.sourceforge.net v 1.55  T=0.5 s (24.0 files/s, 22786.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C++                              3           1522           3345           5622
+C/C++ Header                     4             12             16            349
+Visual Basic                     2              3             48            243
+Teamcenter def                   1              0              0            225
+DOS Batch                        2              4              0              4
+-------------------------------------------------------------------------------
+SUM:                            12           1541           3409           6443
+-------------------------------------------------------------------------------
+_________ 
+LIBS.PLOT 
+      42 text files.
+classified 30 files
+      28 unique files.                              
+      30 files ignored.
+
+http://cloc.sourceforge.net v 1.55  T=0.5 s (24.0 files/s, 2258.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Visual Basic                     7            132            417            572
+DOS Batch                        5              0              0              8
+-------------------------------------------------------------------------------
+SUM:                            12            132            417            580
+-------------------------------------------------------------------------------
+________________ 
+LIBS.THORLABSAPT 
+      41 text files.
+classified 26 files
+      24 unique files.                              
+      34 files ignored.
+
+http://cloc.sourceforge.net v 1.55  T=0.5 s (14.0 files/s, 3424.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Visual Basic                     2             94            178            290
+HTML                             1             26           1033             79
+DOS Batch                        4              4              0              8
+-------------------------------------------------------------------------------
+SUM:                             7            124           1211            377
+-------------------------------------------------------------------------------
+Folder PATH listing
+Volume serial number is 0041002E A876:7CB5
+C:.
+|   alsSimpleGUI.Angle.WaveLength.alsUSB.bat
+|   alsSimpleGUI.Angle.WaveLength.alsUSB.vbp
+|   alsSimpleGUI.Angle.WaveLength.alsUSB.vbw
+|   alsSimpleGUI.Angle.WaveLength.bat
+|   alsSimpleGUI.Angle.WaveLength.vbp
+|   alsSimpleGUI.Angle.WaveLength.vbw
+|   files.bat
+|   files.txt
+|   mk.bat
+|   mkLinks.bat
+|   README.html
+|   trace.txt
+|   
++---bas
+|       modCalibration.bas
+|       modFileSave.bas
+|       modGlobals.bas
+|       modMain.bas
+|       modPlot.bas
+|       modPowerCalibration.bas
+|       modScript.bas
+|       modTestDefs.bas
+|       
++---cls
+|       clsAlsRanges.cls
+|       clsAlsSweep.cls
+|       clsAngleSweep.cls
+|       clsAoutSweep.cls
+|       clsProxSweep.cls
+|       clsSRloop.cls
+|       clsTestComp.cls
+|       clsTestProxAR.cls
+|       clsTestProxAR.vsDelay.cls
+|       clsTestProxAR0.cls
+|       clsTestProxAR1.cls
+|       clsTestProxAR2.cls
+|       clsTestProxOffset.cls
+|       
++---ctl
+|       ucFileSave.ctl
+|       
++---doc
+|       alsSimpleGUI.Angle.WaveLength.pdf
+|       alsSimpleGUI.Angle.WaveLength.pptx
+|       alsSimpleGUI.Angle.WaveLength.xlsm
+|       genericLoop.sdx
+|       response.radiation.pptx
+|       S&R.emf
+|       S&R.sdx
+|       
++---frm
+|       38special.ico
+|       alsEt.ico
+|       frm2771.frm
+|       frm2771.frx
+|       frm29038.frm
+|       frm29038.frx
+|       frmAbout.frm
+|       frmAbout.frx
+|       frmEEprom.frm
+|       frmEEprom.frx
+|       frmEtIo.frm
+|       frmEtIo.frx
+|       frmMain.frm
+|       frmMain.frx
+|       frmPlot.frm
+|       frmPlot.frx
+|       frmPrompt.frm
+|       frmPwrCal.frm
+|       frmPwrCal.frx
+|       frmTest.frm
+|       frmTest.frx
+|       Intersil.ico
+|       microChip.ico
+|       Newport.ico
+|       plot.ico
+|       taos.ico
+|       thorlabs.ico
+|       VBA.tmp
+|       
++---installer
+|       alsSimpleGUI.Angle.WaveLength.iss
+|       
++---ISLEEprom
+|       LFC1.txt
+|       LFC2.txt
+|       LFC3.txt
+|       LFC4.txt
+|       LFC5.txt
+|       LFC6.txt
+|       
++---libs.alsUSB
+|   |   alsUSB.bat
+|   |   alsUSB.devel.bat
+|   |   alsUSB.devel.vbp
+|   |   alsUSB.test.bat
+|   |   alsUSB.test.vbp
+|   |   alsUSB.vbp
+|   |   mk.bat
+|   |   README.txt
+|   |   
+|   +---bas
+|   |       dllCallBackFunction.bas
+|   |       kernel32.bas
+|   |       modGeneric.bas
+|   |       modHID.bas
+|   |       modHIDusb.bas
+|   |       usJungoUsb.bas
+|   |       wd_utils.bas
+|   |       windrvr.bas
+|   |       
+|   +---cls
+|   |       EmuUsb.cls
+|   |       HIDusb.cls
+|   |       JungoUsb.cls
+|   |       
+|   +---ctl
+|   |       ucALSusb.ctl
+|   |       
+|   +---frm
+|   |       frmFuse.frm
+|   |       frmFuse.frx
+|   |       frmMain.frm
+|   |       frmMain.frx
+|   |       frmTest.frm
+|   |       frmTest.frx
+|   |       Intersil.ico
+|   |       
+|   \---installer
+|           alsUSB.iss
+|           
++---libs.monochromator
+|   |   mk.bat
+|   |   monochromator.bat
+|   |   monochromator.devel.bat
+|   |   monochromator.devel.vbp
+|   |   monochromator.test.bat
+|   |   monochromator.test.vbp
+|   |   monochromator.vbp
+|   |   README.html
+|   |   
+|   +---bas
+|   |       declarations.bas
+|   |       
+|   +---cls
+|   |       clsGPIB.cls
+|   |       clsHPIB.cls
+|   |       clsNIGPIB.cls
+|   |       clsProLogix.cls
+|   |       
+|   +---ctl
+|   |       .#ucMonochromator.ctl.1.4
+|   |       .#ucMonochromator.ctl.1.8
+|   |       ucMonochromator.ctl
+|   |       ucMonochromator.ctx
+|   |       
+|   +---frm
+|   |       frmMonochromator.frm
+|   |       frmMonochromator.frx
+|   |       frmMonochromator.log
+|   |       Intersil.ico
+|   |       Newport.ico
+|   |       
+|   \---installer
+|           monochromator.devel.iss
+|           monochromator.iss
+|           
++---libs.npXps
+|   |   npXps.bat
+|   |   npXps.exe.bat
+|   |   npXps.exe.vbp
+|   |   npXps.vbp
+|   |   
+|   +---ctl
+|   |       ucNPXPS.ctl
+|   |       
+|   +---drivers.dll
+|   |       EXPORT.DEF
+|   |       Socket.cpp
+|   |       Socket.h
+|   |       strtok_r.cpp
+|   |       strtok_r.h
+|   |       XPS_C8_drivers.bas
+|   |       XPS_C8_drivers.cpp
+|   |       XPS_C8_drivers.dll
+|   |       XPS_C8_drivers.h
+|   |       XPS_C8_drivers.lib
+|   |       XPS_C8_errors.h
+|   |       
+|   \---frm
+|           frmNpXps.frm
+|           frmNpXps.frx
+|           Newport.ico
+|           
++---libs.plot
+|   |   data.txt
+|   |   mk.bat
+|   |   plotTest.bat
+|   |   plotTest.vbp
+|   |   plotUserControl.bat
+|   |   plotUserControl.devel.bat
+|   |   plotUserControl.devel.vbp
+|   |   plotUserControl.test.bat
+|   |   plotUserControl.test.vbp
+|   |   plotUserControl.vbp
+|   |   
+|   +---bas
+|   |       DSP.calculations.pptx
+|   |       modDSP.bas
+|   |       modPlot.bas
+|   |       modRadiation.bas
+|   |       modRadiationResponse.bas
+|   |       modResponse.bas
+|   |       
+|   +---ctl
+|   |       .#ucPlot.ctl.1.2
+|   |       ucPlot.ctl
+|   |       ucPlot.ctx
+|   |       
+|   \---frm
+|           frmAbout.frm
+|           frmAbout.frx
+|           frmPlot.frm
+|           frmPlot.frx
+|           plot.ico
+|           
++---libs.thorLabsAPT
+|   |   mk.bat
+|   |   README.html
+|   |   thorlabsAPT.bat
+|   |   thorlabsAPT.devel.bat
+|   |   thorlabsAPT.devel.vbp
+|   |   thorlabsAPT.test.bat
+|   |   thorlabsAPT.test.vbp
+|   |   thorlabsAPT.vbp
+|   |   
+|   +---bas
+|   |       thorlabsAPT.bas
+|   |       
+|   +---ctl
+|   |       ucThorlabsAPT.ctl
+|   |       ucThorlabsAPT.ctx
+|   |       
+|   +---frm
+|   |       frmThorlabsAPT.frm
+|   |       frmThorlabsAPT.frx
+|   |       thorlabs.ico
+|   |       
+|   \---installer
+|           thorlabsAPT.devel.iss
+|           thorlabsAPT.iss
+|           
++---README_files
+|       colorschememapping.xml
+|       filelist.xml
+|       themedata.thmx
+|       
+\---scripts
+    |   29038.AlsComp.txt
+    |   29038.proximity.black.txt
+    |   29038.proximity.txt
+    |   29038.proximity.white.txt
+    |   29038.proximityAR.txt
+    |   scripts.xlsx
+    |   startup.txt
+    |   
+    +---DataTemplate
+    |   |   alsComp.glass.device.coat.rev.col3.xlsm
+    |   |   alsResponse.300-1100.1.repeat.calibrated.xlsm
+    |   |   alsResponse.300-1100.1.repeat.noCal.xlsm
+    |   |   alsResponse.300-1100.1.xlsm
+    |   |   alsResponse.300-1100.5.col1.xlsm
+    |   |   mklinks.bat
+    |   |   New Microsoft Office Excel Worksheet.xlsx
+    |   |   radiation.-90+90.1.repeat.xlsm
+    |   |   swept.proximity.80points.4irdr.xlsm
+    |   |   swept.proximity.80points.TMD2771.xlsm
+    |   |   Test.ProxAR.40meas.xlsx
+    |   |   Test.ProxAR.80meas.xlsx
+    |   |   Test.ProxAR0.32.meas.xlsm
+    |   |   Test.ProxAR1.32.meas.xlsm
+    |   |   Test.ProxAR2.64.meas.col4.xlsm
+    |   |   trace.txt
+    |   |   
+    |   \---test.conditions.device.rev
+    |       |   files.txt
+    |       |   mini.bose.xlsx
+    |       |   proximityWashout.solar.29038.xlsx
+    |       |   swept.proximity.29038.barrier,glass,offset.xlsm
+    |       |   vl1924e(1).xlsx
+    |       |   
+    |       +---alsCompSpectra
+    |       |       led+motoB.csv
+    |       |       led+motoB.gif
+    |       |       led.csv
+    |       |       led.gif
+    |       |       qth+motoB.csv
+    |       |       qth+motoB.gif
+    |       |       qth.csv
+    |       |       qth.gif
+    |       |       
+    |       +---alsResponse
+    |       +---experiments
+    |       |       alsResponse.300-1100.1.repeat.calibrated.xlsm
+    |       |       alsResponse.300-1100.1.repeat.noCal.xlsm
+    |       |       Test.ProxAR.40meas.5ma.38C3.xlsx
+    |       |       
+    |       +---Nikhil_droopUp
+    |       |       Copy of Test.ProxAR.32.meas.AR1_C2.xlsm
+    |       |       residue_counts.xlsx
+    |       |       Test.ProxAR.32.meas.AR0_C2.xlsx
+    |       |       Test.ProxAR.32.meas.AR1_C2.xlsm
+    |       |       Test.ProxAR.32.meas_Offset_C2.xlsx
+    |       |       Test.ProxAR.40meas_125n_Ninja_C5.xlsx
+    |       |       Test.ProxAR.40meas_125n_OCPP_C2.xlsx
+    |       |       Test.ProxAR.40meas_125n_OCPP_C2_FIB2a.xlsx
+    |       |       Test.ProxAR.40meas_125n_OCPP_C2_FIB4.xlsx
+    |       |       Test.ProxAR.40meas_125n_OCPP_sleep3m_C2.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_2ndReading_C5.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_A1.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_C2.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_C3.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_C5.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_C6.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_sleep25m_A1.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_sleep25m_C2.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_sleep25m_C3.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_sleep25m_C5.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_sleep25m_C6.xlsx
+    |       |       Test.ProxAR.40meas_125n_reg11_0_sleep3m_C2.xlsx
+    |       |       Test.ProxAR.40meas_250n_OCPP_C2_FIB3.xlsx
+    |       |       Test.ProxAR.40meas_250n_reg11_05_C2.xlsx
+    |       |       Test.ProxAR.40meas_Bleed_OCPP_C2.xlsx
+    |       |       Test.ProxAR.40meas_reg11_02_C2.xlsx
+    |       |       Test.ProxAR.40meas_supply235_C2.xlsx
+    |       |       Test.ProxAR0.32.meas.xlsm
+    |       |       Test.ProxAR2.64meas_OCPP_uncoated_C2.xlsx
+    |       |       Test.ProxAR2.64meas_OCPP_uncoated_C2_FIB2a.xlsx
+    |       |       Test.ProxAR2.64meas_OCPP_uncoated_C2_FIB4.xlsx
+    |       |       trace.txt
+    |       |       _Test.ProxAR2.64meas_OCPP_uncoated_C2.xlsx
+    |       |       
+    |       +---Palette
+    |       |       alsResponse.29038.LFB.C3.run1.xlsm
+    |       |       alsResponse.29038.LFB.C3.xlsm
+    |       |       
+    |       +---phone
+    |       |   |   swept.proximity.0-80.1.29038.C5.xlsm
+    |       |   |   
+    |       |   +---HTC-38-C3LF
+    |       |   |       swept.proximity.80points.4irdr-1mmfromsensortoglassLF.xlsm
+    |       |   |       swept.proximity.80points.4irdr-2mmfromsensortoglassLF.xlsm
+    |       |   |       swept.proximity.80points.4irdr-3mmfromsensortoglassLF.xlsm
+    |       |   |       swept.proximity.80points.4irdr-4mmfromsensortoglassLF.xlsm
+    |       |   |       swept.proximity.80points.4irdr-5mmfromsensortoglassLF.xlsm
+    |       |   |       
+    |       |   \---HTC-38-C5JDSU
+    |       |       |   swept.proximity.80points.4irdr-1mmfromsensortoglass.xlsm
+    |       |       |   swept.proximity.80points.4irdr-2mmfromsensortoglass.xlsm
+    |       |       |   swept.proximity.80points.4irdr-3mmfromsensortoglass.xlsm
+    |       |       |   swept.proximity.80points.4irdr-4mmfromsensortoglass.xlsm
+    |       |       |   swept.proximity.80points.4irdr-5mmfromsensortoglass.xlsm
+    |       |       |   swept.proximity.80points.4irdr-61fromsensortoglass.xlsm
+    |       |       |   
+    |       |       \---New Folder
+    |       +---processed
+    |       |   |   alsResponse.29038.pdf
+    |       |   |   files.txt
+    |       |   |   proximityWashout.solar.29038.xlsx
+    |       |   |   TestList.29038.pdf
+    |       |   |   TestList.29038.pptx
+    |       |   |   testSummarys.29038.xlsx
+    |       |   |   testSummarys.pdf
+    |       |   |   
+    |       |   +---alsComp
+    |       |   |   |   alsComp.07Glass.29038.LF.revC2.xlsm
+    |       |   |   |   alsComp.07Glass.29038.LF.revC3.xlsm
+    |       |   |   |   alsComp.g7(25).29038.JDSU.revC1.xlsm
+    |       |   |   |   alsComp.g7(25).29038.JDSU.revC2.xlsm
+    |       |   |   |   alsComp.g7(25).29038.JDSU.revC3.xlsm
+    |       |   |   |   alsComp.g7(25).29038.JDSU.revC4.xlsm
+    |       |   |   |   alsComp.g7(25).29038.JDSU.revC5.xlsm
+    |       |   |   |   alsComp.g7(25).29038.JDSU.revC6.xlsm
+    |       |   |   |   alsComp.motoB.29038.JDSU.revC1.xlsm
+    |       |   |   |   alsComp.motoB.29038.JDSU.revC2.xlsm
+    |       |   |   |   alsComp.motoB.29038.JDSU.revC3.xlsm
+    |       |   |   |   alsComp.motoB.29038.JDSU.revC4.xlsm
+    |       |   |   |   alsComp.motoB.29038.JDSU.revC5.xlsm
+    |       |   |   |   alsComp.motoB.29038.JDSU.revC6.xlsm
+    |       |   |   |   alsComp.motoB.29038.LF.revC1.xlsm
+    |       |   |   |   alsComp.motoB.29038.LF.revC2.xlsm
+    |       |   |   |   alsComp.motoB.29038.LF.revC3.xlsm
+    |       |   |   |   alsComp.motoB.29038.LF.revC4.xlsm
+    |       |   |   |   alsComp.motoB.29038.LF.revC5.xlsm
+    |       |   |   |   alsComp.motoB.29038.LF.revC6.xlsm
+    |       |   |   |   alsComp.motoB.29038.revC4.xlsm
+    |       |   |   |   alsComp.motoB.29038.revC5.xlsm
+    |       |   |   |   alsComp.noGlass.29038.JDSU.revC1.xlsm
+    |       |   |   |   alsComp.noGlass.29038.JDSU.revC2.xlsm
+    |       |   |   |   alsComp.noGlass.29038.JDSU.revC3.xlsm
+    |       |   |   |   alsComp.noGlass.29038.JDSU.revC4.xlsm
+    |       |   |   |   alsComp.noGlass.29038.LF.revC1.xlsm
+    |       |   |   |   alsComp.noGlass.29038.LF.revC2.xlsm
+    |       |   |   |   alsComp.noGlass.29038.LF.revC3.xlsm
+    |       |   |   |   alsComp.noGlass.29038.LF.revC4.xlsm
+    |       |   |   |   alsComp.noGlass.29038.LF.revC5.xlsm
+    |       |   |   |   alsComp.noGlass.29038.LF.revC6.xlsm
+    |       |   |   |   alsComp.noGlass.29038.LF.revC6.xlsx
+    |       |   |   |   alsComp.noGlass.29038.revC5.xlsx
+    |       |   |   |   JDSU.C3.vs.IR-Vis.xlsx
+    |       |   |   |   
+    |       |   |   \---notIncluded
+    |       |   |           alsComp.motoB.29038.revC4.xlsx
+    |       |   |           alsComp.motoB.29038.revC5.REPEATABILITY.xlsm
+    |       |   |           alsComp.motoB.29038.revC5.REPEATABILITY.xlsx
+    |       |   |           alsComp.motoB.29038.revC5.xlsx
+    |       |   |           alsComp.motob.57Lux.29038.C5samples.xlsx
+    |       |   |           alsComp.noGlass.710Lux.29038.C5samples.xlsx
+    |       |   |           
+    |       |   +---alsResponse
+    |       |   |       alsComp.motoB.29038.LFC2.xlsm
+    |       |   |       alsResponse.29038.JDSU.C2.xlsm
+    |       |   |       alsResponse.29038.JDSU.C3.xlsm
+    |       |   |       alsResponse.29038.JDSU.C4.xlsm
+    |       |   |       alsResponse.29038.LF0.C1.xlsm
+    |       |   |       alsResponse.29038.LF0.C2.xlsm
+    |       |   |       alsResponse.29038.LF0.C3.xlsm
+    |       |   |       alsResponse.29038.LF0.C4.xlsm
+    |       |   |       alsResponse.29038.LF0.C5.xlsm
+    |       |   |       alsResponse.29038.LF0.C6.xlsm
+    |       |   |       alsResponse.29038.LF0.openComp.C1.xlsm
+    |       |   |       
+    |       |   +---proxAR.sleep12.220ma.29038
+    |       |   |       proxAR.sleep12.220ma.29038.docx
+    |       |   |       proxAR.sleep12.220ma.29038.pdf
+    |       |   |       proxAR.sleep12.220ma.29038.revC4.xlsx
+    |       |   |       proxAR.sleep12.220ma.29038.revC6.REPEATABILITY.xlsx
+    |       |   |       proxAR.sleep12.220ma.29038.revC6.xlsx
+    |       |   |       Test.ProxAR.40meas.5ma.38C3.xlsx
+    |       |   |       
+    |       |   +---proxArTrim
+    |       |   |       proxArTrim.pdf
+    |       |   |       proxArTrim.pptx
+    |       |   |       Test.ProxAR.40meas.22OhmVdd.C3.xlsx
+    |       |   |       Test.ProxAR.40meas.pin1-0.2Ohm.C3.xlsx
+    |       |   |       Test.ProxAR.40meas.pin1-0.5Ohm.C3.xlsx
+    |       |   |       Test.ProxAR.40meas.pin1-1.0Ohm.C3.xlsx
+    |       |   |       Test.ProxAR.40meas.pin1-2.0Ohm.C3.xlsx
+    |       |   |       Test.ProxAR.40meas.pin1.open.C3.xlsx
+    |       |   |       Test.ProxAR.40meas.pin1.open.C6.xlsx
+    |       |   |       Test.ProxAR.40meas.pin3.open.C3.xlsx
+    |       |   |       Test.ProxAR.40meas.pin3.open.C6.xlsx
+    |       |   |       
+    |       |   +---swept.proximity.range.C3,5,30
+    |       |   |       swept.proximity.29038.revC3.litefilm.xlsm
+    |       |   |       swept.proximity.29038.revC6.litefilm.xlsm
+    |       |   |       
+    |       |   +---swept.proximity.range.greyCard
+    |       |   |       29038 VB Fuse Blow.pdf
+    |       |   |       swept.proximity.0-160.2.grey.29030.xlsm
+    |       |   |       swept.proximity.0-80.1.grey.29038.revC3(labeledAs1).xlsm
+    |       |   |       swept.proximity.0-80.1.grey.29038.revC5.xlsm
+    |       |   |       swept.proximity.29038.revC3.litefilm.xlsm
+    |       |   |       swept.proximity.29038.revC6.litefilm.xlsm
+    |       |   |       swept.proximity.range.greyCard.pdf
+    |       |   |       swept.proximity.range.greyCard.pptx
+    |       |   |       
+    |       |   \---swept.proximity.targets.C4
+    |       |           range.vs.target.C4.pdf
+    |       |           range.vs.target.C4.xlsx
+    |       |           swept.proximity.0-160.2.white.29038.revC4.xlsm
+    |       |           swept.proximity.0-240.3.mirror.29038.revC4.xlsm
+    |       |           swept.proximity.0-80.1.black.29038.revC4.xlsm
+    |       |           swept.proximity.0-80.1.grey.29038.revC4.xlsm
+    |       |           
+    |       +---proxRange
+    |       |       swept.proximity.0-160.2.29030.xlsm
+    |       |       swept.proximity.0-160.2.29038.C3.xlsm
+    |       |       swept.proximity.1M_prxTr=1.0-160.2.29038.C3.xlsm
+    |       |       swept.proximity.600k_prxTr=1.0-160.2.29038.C3.xlsm
+    |       |       
+    |       +---samples
+    |       |       proxAR.sleep0.220ma.29038.C5samples.xlsx
+    |       |       swept.proximity.0-80.1.29038.C5samples.xlsm
+    |       |       
+    |       +---swept.proximity
+    |       |       swept.proximity.0-160.2.grey.29038.revCx(labledAs3).xlsm
+    |       |       swept.proximity.0-160.2.white.29038.revC5.xlsm
+    |       |       swept.proximity.0-240.3.mirror.29038.rev0.xlsm
+    |       |       swept.proximity.0-240.3.mirror.29038.revC5.xlsm
+    |       |       swept.proximity.0-80.1.black.29038.revC5.xlsm
+    |       |       swept.proximity.0-80.1.grey.29038.C4.pdf
+    |       |       swept.proximity.0-80.1.grey.29038.rev0.xlsm
+    |       |       
+    |       +---swept.proximity.29038.barrier,offset
+    |       |       swept.proximity.29038.barrier,offset.pptx
+    |       |       swept.proximity.29038.barrier=max,glass=min,offset=0.xlsm
+    |       |       swept.proximity.29038.barrier=reduced,glass=2,offset=adjusted.xlsm
+    |       |       swept.proximity.29038.barrier=reduced,glass=3,offset=adjusted.xlsm
+    |       |       swept.proximity.29038.barrier=reduced,glass=min,offset=0.xlsm
+    |       |       swept.proximity.29038.barrier=reduced,glass=min,offset=adjusted.xlsm
+    |       |       
+    |       \---TMD2771
+    |               swept.proximity.80points.TMD2771.xlsm
+    |               
+    +---Device
+    |       29038.txt
+    |       
+    \---Tests
+            alsComp.txt
+            proximity.txt
+            proximityAR.txt
+            

@@ -1,0 +1,34 @@
+Nov 5 2014
+____________________________
+Enhancements (*next release)
+
+Adjust autorange:
+	* HI->LO: Max<140 (1.5% of HI)
+	* LO->HI: Max>225 (60% of LO)
+	Note: No HS mode autorange
+Add Solar (indoor/outdoor) detect:
+	* Lux: 1.0/1.2 kLux
+	* CCT: 4.5/4.0 kK
+	* dIR: 0.5/0.4 %/value/tick
+	* Note Add with level & hysteresis band enable/and/or logic
+Miscellaneous
+	* dIR measure 
+	4x3 CCM (use dIR/clear)
+
+Monitor Calibration:
+	Datacolor Spyder4Express S4X100 Display Calibration Device (asked Cheryl to order)
+Docs:
+	Add Android count conversion for CCM calculation
+	* App Note remove Blah
+	
+__________________________________________________________________
+Release 1.6: Freeze 11/4, Web post 11/21: (+ Meizu/Bruce requests)
+	Change autorange thresholds
+	+ Add indoor/outdoor (new window loaded with defaults)
+	+ Add dIR measure
+	Hide Monitor Calibration Window
+	Active-X Excel Calibration (ship with monitor calibration sheet with disclaimer)
+	User Manual Updates:
+		New Widgets
+		+ dIR sequence description
+	App Note: remove Blah

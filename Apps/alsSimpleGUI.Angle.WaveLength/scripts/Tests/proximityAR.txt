@@ -1,0 +1,20 @@
+# C:\CVSROOT\ALS_(ambient_light_sensors)\Software\Workspaces\Apps\alsSimpleGUI.Angle.WaveLength\
+# scripts\Tests\proximityAR.txt
+
+# App Msg Running proximityAR.txt
+
+App ViewIns
+App ViewTests
+
+Als EnableAls 0
+
+Plot Nplots 1
+Plot 0
+Plot Input Prox
+Plot Col 4
+
+Ins Gpib Prologix
+Ins FWenable 1
+
+# App LpRun 3
+# Tests ProxAR

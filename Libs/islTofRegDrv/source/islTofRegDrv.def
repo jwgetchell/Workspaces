@@ -1,0 +1,22 @@
+LIBRARY      "islTofRegDrv"
+
+EXPORTS
+
+cSetAmbientCoeffs
+
+cGetStats
+cInitDriver
+cPrintTrace
+cResetDevice
+
+cSetDrvApi
+
+cIO
+cWriteField
+cReadField
+
+
+VarPtr_
+memcpy_
+cpyAddr2byte_
+strcpy_
