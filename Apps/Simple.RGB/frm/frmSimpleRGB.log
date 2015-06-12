@@ -1,3 +1,1 @@
-Line 20: Class Application.ucBarGraph of control ucBarGraph_sRGB was not a loaded control class.
-Line 26: The property name _ExtentX in ucBarGraph_sRGB is invalid.
-Line 27: The property name _ExtentY in ucBarGraph_sRGB is invalid.
+Line 20: Class SimpleRGB.ucBarGraph of control ucBarGraph_sRGB was not a loaded control class.
