@@ -517,62 +517,62 @@ Private Declare Function cGetPartNumber Lib "registerDriver" (r As Long) As Long
 Private Declare Function cGetPartFamily Lib "registerDriver" (r As Long) As Long
 
 ' 29038
-Private Declare Function cSetProxIntEnable Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetProxIntEnable Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetProxOffset Lib "registerDriver" (x As Long) As Long
-Private Declare Function cGetProxOffset Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetIRcomp Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetIRcomp Lib "registerDriver" (x As Long) As Long
+Private Declare Function cSetProxIntEnable Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetProxIntEnable Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetProxOffset Lib "registerDriver" (X As Long) As Long
+Private Declare Function cGetProxOffset Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetIRcomp Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetIRcomp Lib "registerDriver" (X As Long) As Long
 Private Declare Function cGetProxAlrm Lib "registerDriver" (i As Long) As Long
-Private Declare Function cSetVddAlrm Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetVddAlrm Lib "registerDriver" (x As Long) As Long
+Private Declare Function cSetVddAlrm Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetVddAlrm Lib "registerDriver" (X As Long) As Long
 
 ' 29038 trim
-Private Declare Function cSetProxTrim Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetProxTrim Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetIrdrTrim Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetIrdrTrim Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetAlsTrim Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetAlsTrim Lib "registerDriver" (x As Long) As Long
+Private Declare Function cSetProxTrim Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetProxTrim Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetIrdrTrim Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetIrdrTrim Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetAlsTrim Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetAlsTrim Lib "registerDriver" (X As Long) As Long
 
-Private Declare Function cSetRegOtpSel Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetRegOtpSel Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetOtpData Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetOtpData Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetFuseWrEn Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetFuseWrEn Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetFuseWrAddr Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetFuseWrAddr Lib "registerDriver" (x As Long) As Long
+Private Declare Function cSetRegOtpSel Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetRegOtpSel Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetOtpData Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetOtpData Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetFuseWrEn Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetFuseWrEn Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetFuseWrAddr Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetFuseWrAddr Lib "registerDriver" (X As Long) As Long
 
-Private Declare Function cGetOptDone Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetIrdrDcPulse Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetIrdrDcPulse Lib "registerDriver" (x As Long) As Long
-Private Declare Function cGetGolden Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetOtpRes Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetOtpRes Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetIntTest Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetIntTest Lib "registerDriver" (x As Long) As Long
+Private Declare Function cGetOptDone Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetIrdrDcPulse Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetIrdrDcPulse Lib "registerDriver" (X As Long) As Long
+Private Declare Function cGetGolden Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetOtpRes Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetOtpRes Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetIntTest Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetIntTest Lib "registerDriver" (X As Long) As Long
 
 ' RGB
-Private Declare Function cGetRed Lib "registerDriver" (x As Double) As Long
-Private Declare Function cGetGreen Lib "registerDriver" (x As Double) As Long
-Private Declare Function cGetBlue Lib "registerDriver" (x As Double) As Long
-Private Declare Function cGetCCT Lib "registerDriver" (x As Double) As Long
+Private Declare Function cGetRed Lib "registerDriver" (X As Double) As Long
+Private Declare Function cGetGreen Lib "registerDriver" (X As Double) As Long
+Private Declare Function cGetBlue Lib "registerDriver" (X As Double) As Long
+Private Declare Function cGetCCT Lib "registerDriver" (X As Double) As Long
 
-Private Declare Function cGetRgbCoeffEnable Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetRgbCoeffEnable Lib "registerDriver" (ByVal x As Long) As Long
+Private Declare Function cGetRgbCoeffEnable Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetRgbCoeffEnable Lib "registerDriver" (ByVal X As Long) As Long
 
-Private Declare Function cLoadRgbCoeff Lib "registerDriver" (x As Double) As Long
+Private Declare Function cLoadRgbCoeff Lib "registerDriver" (X As Double) As Long
 Private Declare Function cClearRgbCoeff Lib "registerDriver" () As Long
 Private Declare Function cEnable4x Lib "registerDriver" (ByVal m As Long) As Long
 Private Declare Function cEnable8bit Lib "registerDriver" (ByVal m As Long) As Long
 
 ' 177
 
-Private Declare Function cSetPrxRngOffCmpEn Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetPrxRngOffCmpEn Lib "registerDriver" (x As Long) As Long
-Private Declare Function cSetIrdrMode Lib "registerDriver" (ByVal x As Long) As Long
-Private Declare Function cGetIrdrMode Lib "registerDriver" (x As Long) As Long
+Private Declare Function cSetPrxRngOffCmpEn Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetPrxRngOffCmpEn Lib "registerDriver" (X As Long) As Long
+Private Declare Function cSetIrdrMode Lib "registerDriver" (ByVal X As Long) As Long
+Private Declare Function cGetIrdrMode Lib "registerDriver" (X As Long) As Long
 
 Public pUsb As Object
 Private usbCaption As String
@@ -1060,207 +1060,207 @@ End Function
 ' _____
 ' 29038
 ' ¯¯¯¯¯
-Public Function dSetProxIntEnable(ByVal x As Long) As Long
-    dSetProxIntEnable = cSetProxIntEnable(x)
+Public Function dSetProxIntEnable(ByVal X As Long) As Long
+    dSetProxIntEnable = cSetProxIntEnable(X)
     If dSetProxIntEnable Then Call cSetError(dSetProxIntEnable, "dSetProxIntEnable")
 End Function
-Public Function dGetProxIntEnable(x As Long) As Long
-    dGetProxIntEnable = cGetProxIntEnable(x)
+Public Function dGetProxIntEnable(X As Long) As Long
+    dGetProxIntEnable = cGetProxIntEnable(X)
     If dGetProxIntEnable Then Call cSetError(dGetProxIntEnable, "dGetProxIntEnable")
 End Function
 
-Public Function dSetProxOffset(x As Long) As Long
-    dSetProxOffset = cSetProxOffset(x)
+Public Function dSetProxOffset(X As Long) As Long
+    dSetProxOffset = cSetProxOffset(X)
     If dSetProxOffset Then Call cSetError(dSetProxOffset, "dSetProxOffset")
 End Function
-Public Function dGetProxOffset(x As Long) As Long
-    dGetProxOffset = cGetProxOffset(x)
+Public Function dGetProxOffset(X As Long) As Long
+    dGetProxOffset = cGetProxOffset(X)
     If dGetProxOffset Then Call cSetError(dGetProxOffset, "dGetProxOffset")
 End Function
 
-Public Function dSetIRcomp(ByVal x As Long) As Long
-    dSetIRcomp = cSetIRcomp(x)
+Public Function dSetIRcomp(ByVal X As Long) As Long
+    dSetIRcomp = cSetIRcomp(X)
     If dSetIRcomp Then Call cSetError(dSetIRcomp, "dSetIRcomp")
 End Function
-Public Function dGetIRcomp(x As Long) As Long
-    dGetIRcomp = cGetIRcomp(x)
+Public Function dGetIRcomp(X As Long) As Long
+    dGetIRcomp = cGetIRcomp(X)
     If dGetIRcomp Then Call cSetError(dGetIRcomp, "dGetIRcomp")
 End Function
 
-Public Function dSetVddAlrm(ByVal x As Long) As Long
-    dSetVddAlrm = cSetVddAlrm(x)
+Public Function dSetVddAlrm(ByVal X As Long) As Long
+    dSetVddAlrm = cSetVddAlrm(X)
     If dSetVddAlrm Then Call cSetError(dSetVddAlrm, "dSetVddAlrm")
 End Function
-Public Function dGetVddAlrm(x As Long) As Long
-    dGetVddAlrm = cGetVddAlrm(x)
+Public Function dGetVddAlrm(X As Long) As Long
+    dGetVddAlrm = cGetVddAlrm(X)
     If dGetVddAlrm Then Call cSetError(dGetVddAlrm, "dGetVddAlrm")
 End Function
 
 ' __________
 ' 29038 Trim
 ' ¯¯¯¯¯¯¯¯¯¯
-Public Function dSetProxTrim(ByVal x As Long) As Long
-    dSetProxTrim = cSetProxTrim(x)
+Public Function dSetProxTrim(ByVal X As Long) As Long
+    dSetProxTrim = cSetProxTrim(X)
     If dSetProxTrim Then Call cSetError(dSetProxTrim, "dSetProxTrim")
 End Function
-Public Function dGetProxTrim(x As Long) As Long
-    dGetProxTrim = cGetProxTrim(x)
+Public Function dGetProxTrim(X As Long) As Long
+    dGetProxTrim = cGetProxTrim(X)
     If dGetProxTrim Then Call cSetError(dGetProxTrim, "dGetProxTrim")
 End Function
 
-Public Function dSetIrdrTrim(ByVal x As Long) As Long
-    dSetIrdrTrim = cSetIrdrTrim(x)
+Public Function dSetIrdrTrim(ByVal X As Long) As Long
+    dSetIrdrTrim = cSetIrdrTrim(X)
     If dSetIrdrTrim Then Call cSetError(dSetIrdrTrim, "dSetIrdrTrim")
 End Function
-Public Function dGetIrdrTrim(x As Long) As Long
-    dGetIrdrTrim = cGetIrdrTrim(x)
+Public Function dGetIrdrTrim(X As Long) As Long
+    dGetIrdrTrim = cGetIrdrTrim(X)
     If dGetIrdrTrim Then Call cSetError(dGetIrdrTrim, "dGetIrdrTrim")
 End Function
 
-Public Function dSetAlsTrim(ByVal x As Long) As Long
-    dSetAlsTrim = cSetAlsTrim(x)
+Public Function dSetAlsTrim(ByVal X As Long) As Long
+    dSetAlsTrim = cSetAlsTrim(X)
     If dSetAlsTrim Then Call cSetError(dSetAlsTrim, "dSetAlsTrim")
 End Function
-Public Function dGetAlsTrim(x As Long) As Long
-    dGetAlsTrim = cGetAlsTrim(x)
+Public Function dGetAlsTrim(X As Long) As Long
+    dGetAlsTrim = cGetAlsTrim(X)
     If dGetAlsTrim Then Call cSetError(dGetAlsTrim, "dGetAlsTrim")
 End Function
 
 
-Public Function dSetRegOtpSel(ByVal x As Long) As Long
-    dSetRegOtpSel = cSetRegOtpSel(x)
+Public Function dSetRegOtpSel(ByVal X As Long) As Long
+    dSetRegOtpSel = cSetRegOtpSel(X)
     If dSetRegOtpSel Then Call cSetError(dSetRegOtpSel, "dSetRegOtpSel")
 End Function
-Public Function dGetRegOtpSel(x As Long) As Long
-    dGetRegOtpSel = cGetRegOtpSel(x)
+Public Function dGetRegOtpSel(X As Long) As Long
+    dGetRegOtpSel = cGetRegOtpSel(X)
     If dGetRegOtpSel Then Call cSetError(dGetRegOtpSel, "dGetRegOtpSel")
 End Function
 
 
-Public Function dSetOtpData(ByVal x As Long) As Long
-    dSetOtpData = cSetOtpData(x)
+Public Function dSetOtpData(ByVal X As Long) As Long
+    dSetOtpData = cSetOtpData(X)
     If dSetOtpData Then Call cSetError(dSetOtpData, "dSetOtpData")
 End Function
-Public Function dGetOtpData(x As Long) As Long
-    dGetOtpData = cGetOtpData(x)
+Public Function dGetOtpData(X As Long) As Long
+    dGetOtpData = cGetOtpData(X)
     If dGetOtpData Then Call cSetError(dGetOtpData, "dGetOtpData")
 End Function
 
-Public Function dSetFuseWrEn(ByVal x As Long) As Long
-    dSetFuseWrEn = cSetFuseWrEn(x)
+Public Function dSetFuseWrEn(ByVal X As Long) As Long
+    dSetFuseWrEn = cSetFuseWrEn(X)
     If dSetFuseWrEn Then Call cSetError(dSetFuseWrEn, "dSetFuseWrEn")
 End Function
-Public Function dGetFuseWrEn(x As Long) As Long
-    dGetFuseWrEn = cGetFuseWrEn(x)
+Public Function dGetFuseWrEn(X As Long) As Long
+    dGetFuseWrEn = cGetFuseWrEn(X)
     If dGetFuseWrEn Then Call cSetError(dGetFuseWrEn, "dGetFuseWrEn")
 End Function
 
-Public Function dSetFuseWrAddr(ByVal x As Long) As Long
-    dSetFuseWrAddr = cSetFuseWrAddr(x)
+Public Function dSetFuseWrAddr(ByVal X As Long) As Long
+    dSetFuseWrAddr = cSetFuseWrAddr(X)
     If dSetFuseWrAddr Then Call cSetError(dSetFuseWrAddr, "dSetFuseWrAddr")
 End Function
-Public Function dGetFuseWrAddr(x As Long) As Long
-    dGetFuseWrAddr = cGetFuseWrAddr(x)
+Public Function dGetFuseWrAddr(X As Long) As Long
+    dGetFuseWrAddr = cGetFuseWrAddr(X)
     If dGetFuseWrAddr Then Call cSetError(dGetFuseWrAddr, "dGetFuseWrAddr")
 End Function
 
 
-Public Function dGetOptDone(x As Long) As Long
-    dGetOptDone = cGetOptDone(x)
+Public Function dGetOptDone(X As Long) As Long
+    dGetOptDone = cGetOptDone(X)
     If dGetOptDone Then Call cSetError(dGetOptDone, "dGetOptDone")
 End Function
 
-Public Function dSetIrdrDcPulse(ByVal x As Long) As Long
-    dSetIrdrDcPulse = cSetIrdrDcPulse(x)
+Public Function dSetIrdrDcPulse(ByVal X As Long) As Long
+    dSetIrdrDcPulse = cSetIrdrDcPulse(X)
     If dSetIrdrDcPulse Then Call cSetError(dSetIrdrDcPulse, "dSetIrdrDcPulse")
 End Function
-Public Function dGetIrdrDcPulse(x As Long) As Long
-    dGetIrdrDcPulse = cGetIrdrDcPulse(x)
+Public Function dGetIrdrDcPulse(X As Long) As Long
+    dGetIrdrDcPulse = cGetIrdrDcPulse(X)
     If dGetIrdrDcPulse Then Call cSetError(dGetIrdrDcPulse, "dGetIrdrDcPulse")
 End Function
 
-Public Function dGetGolden(x As Long) As Long
-    dGetGolden = cGetGolden(x)
+Public Function dGetGolden(X As Long) As Long
+    dGetGolden = cGetGolden(X)
     If dGetGolden Then Call cSetError(dGetGolden, "dGetGolden")
 End Function
 
-Public Function dSetOtpRes(ByVal x As Long) As Long
-    dSetOtpRes = cSetOtpRes(x)
+Public Function dSetOtpRes(ByVal X As Long) As Long
+    dSetOtpRes = cSetOtpRes(X)
     If dSetOtpRes Then Call cSetError(dSetOtpRes, "dSetOtpRes")
 End Function
-Public Function dGetOtpRes(x As Long) As Long
-    dGetOtpRes = cGetOtpRes(x)
+Public Function dGetOtpRes(X As Long) As Long
+    dGetOtpRes = cGetOtpRes(X)
     If dGetOtpRes Then Call cSetError(dGetOtpRes, "dGetOtpRes")
 End Function
 
-Public Function dSetIntTest(ByVal x As Long) As Long
-    dSetIntTest = cSetIntTest(x)
+Public Function dSetIntTest(ByVal X As Long) As Long
+    dSetIntTest = cSetIntTest(X)
     If dSetIntTest Then Call cSetError(dSetIntTest, "dSetIntTest")
 End Function
-Public Function dGetIntTest(x As Long) As Long
-    dGetIntTest = cGetIntTest(x)
+Public Function dGetIntTest(X As Long) As Long
+    dGetIntTest = cGetIntTest(X)
     If dGetIntTest Then Call cSetError(dGetIntTest, "dGetIntTest")
 End Function
 
 
 ' RGB
-Public Function dGetRed(x As Double) As Long
-    dGetRed = cGetRed(x)
+Public Function dGetRed(X As Double) As Long
+    dGetRed = cGetRed(X)
     If dGetRed Then Call cSetError(dGetRed, "dGetRed")
 End Function
-Public Function dGetGreen(x As Double) As Long
-    dGetGreen = cGetGreen(x)
+Public Function dGetGreen(X As Double) As Long
+    dGetGreen = cGetGreen(X)
     If dGetGreen Then Call cSetError(dGetGreen, "dGetGreen")
 End Function
-Public Function dGetBlue(x As Double) As Long
-    dGetBlue = cGetBlue(x)
+Public Function dGetBlue(X As Double) As Long
+    dGetBlue = cGetBlue(X)
     If dGetBlue Then Call cSetError(dGetBlue, "dGetBlue")
 End Function
-Public Function dGetCCT(x As Double) As Long
-    dGetCCT = cGetCCT(x)
+Public Function dGetCCT(X As Double) As Long
+    dGetCCT = cGetCCT(X)
     If dGetCCT Then Call cSetError(dGetCCT, "dGetCCT")
 End Function
-Public Function dGetRgbCoeffEnable(x As Long) As Long
-    dGetRgbCoeffEnable = cGetRgbCoeffEnable(x)
+Public Function dGetRgbCoeffEnable(X As Long) As Long
+    dGetRgbCoeffEnable = cGetRgbCoeffEnable(X)
     If dGetRgbCoeffEnable Then Call cSetError(dGetRgbCoeffEnable, "dGetRgbCoeffEnable")
 End Function
-Public Function dSetRgbCoeffEnable(ByVal x As Long) As Long
-    dSetRgbCoeffEnable = cSetRgbCoeffEnable(x)
+Public Function dSetRgbCoeffEnable(ByVal X As Long) As Long
+    dSetRgbCoeffEnable = cSetRgbCoeffEnable(X)
     If dSetRgbCoeffEnable Then Call cSetError(dSetRgbCoeffEnable, "dSetRgbCoeffEnable")
 End Function
-Public Function dLoadRgbCoeff(x() As Double) As Long
-    dLoadRgbCoeff = cLoadRgbCoeff(x(0))
+Public Function dLoadRgbCoeff(X() As Double) As Long
+    dLoadRgbCoeff = cLoadRgbCoeff(X(0))
     If dLoadRgbCoeff Then Call cSetError(dLoadRgbCoeff, "dLoadRgbCoeff")
 End Function
 Public Function dClearRgbCoeff() As Long
     dClearRgbCoeff = cClearRgbCoeff()
     If dClearRgbCoeff Then Call cSetError(dClearRgbCoeff, "dClearRgbCoeff")
 End Function
-Public Function dEnable4x(ByVal x As Long) As Long
-    dEnable4x = cEnable4x(x)
+Public Function dEnable4x(ByVal X As Long) As Long
+    dEnable4x = cEnable4x(X)
     If dEnable4x Then Call cSetError(dEnable4x, "dEnable4x")
 End Function
-Public Function dEnable8bit(ByVal x As Long) As Long
-    dEnable8bit = cEnable8bit(x)
+Public Function dEnable8bit(ByVal X As Long) As Long
+    dEnable8bit = cEnable8bit(X)
     If dEnable8bit Then Call cSetError(dEnable8bit, "dEnable8bit")
 End Function
 
 
 ' 177
-Public Function dSetPrxRngOffCmpEn(ByVal x As Long) As Long
-    dSetPrxRngOffCmpEn = cSetPrxRngOffCmpEn(x)
+Public Function dSetPrxRngOffCmpEn(ByVal X As Long) As Long
+    dSetPrxRngOffCmpEn = cSetPrxRngOffCmpEn(X)
     If dSetPrxRngOffCmpEn Then Call cSetError(dSetPrxRngOffCmpEn, "dSetPrxRngOffCmpEn")
 End Function
-Public Function dGetPrxRngOffCmpEn(x As Long) As Long
-    dGetPrxRngOffCmpEn = cGetPrxRngOffCmpEn(x)
+Public Function dGetPrxRngOffCmpEn(X As Long) As Long
+    dGetPrxRngOffCmpEn = cGetPrxRngOffCmpEn(X)
     If dGetPrxRngOffCmpEn Then Call cSetError(dGetPrxRngOffCmpEn, "dGetPrxRngOffCmpEn")
 End Function
-Public Function dSetIrdrMode(ByVal x As Long) As Long
-    dSetIrdrMode = cSetIrdrMode(x)
+Public Function dSetIrdrMode(ByVal X As Long) As Long
+    dSetIrdrMode = cSetIrdrMode(X)
     If dSetIrdrMode Then Call cSetError(dSetIrdrMode, "dSetIrdrMode")
 End Function
-Public Function dGetIrdrMode(x As Long) As Long
-    dGetIrdrMode = cGetIrdrMode(x)
+Public Function dGetIrdrMode(X As Long) As Long
+    dGetIrdrMode = cGetIrdrMode(X)
     If dGetIrdrMode Then Call cSetError(dGetIrdrMode, "dGetIrdrMode")
 End Function
 
@@ -2090,6 +2090,8 @@ On Error GoTo tryADBUsb
     Set Main.pUsb = getUsb
     If testUsb(Main) Then GoTo exitGetUSB
 tryADBUsb:
+    MsgBox "Device not detected, exiting..."
+    End
 On Error GoTo tryjungo
     Set getUsb = ADBUsb1: Set gUsb = getUsb: usbCaption = "ADB"
     'getUsb.setHwnd (Me.hWnd)

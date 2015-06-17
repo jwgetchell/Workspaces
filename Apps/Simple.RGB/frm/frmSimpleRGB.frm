@@ -3,7 +3,7 @@ Begin VB.Form frmSimpleRGB
    Caption         =   "Chroma Meter"
    ClientHeight    =   9090
    ClientLeft      =   225
-   ClientTop       =   855
+   ClientTop       =   870
    ClientWidth     =   10140
    Icon            =   "frmSimpleRGB.frx":0000
    LinkTopic       =   "Form1"
@@ -20,7 +20,7 @@ Begin VB.Form frmSimpleRGB
       Begin SimpleRGB.ucBarGraph ucBarGraph_sRGB 
          Height          =   2295
          Left            =   120
-         TabIndex        =   70
+         TabIndex        =   69
          Top             =   4560
          Width           =   7815
          _ExtentX        =   13785
@@ -29,16 +29,16 @@ Begin VB.Form frmSimpleRGB
       Begin VB.Frame Frame11 
          Caption         =   "sRGB"
          Height          =   1095
-         Left            =   3720
-         TabIndex        =   66
-         Top             =   6960
+         Left            =   2640
+         TabIndex        =   65
+         Top             =   6840
          Width           =   735
          Begin VB.Label lblSrgbVal 
             Caption         =   "BLU"
             Height          =   255
             Index           =   2
             Left            =   120
-            TabIndex        =   69
+            TabIndex        =   68
             Top             =   720
             Width           =   375
          End
@@ -47,7 +47,7 @@ Begin VB.Form frmSimpleRGB
             Height          =   255
             Index           =   1
             Left            =   120
-            TabIndex        =   68
+            TabIndex        =   67
             Top             =   480
             Width           =   375
          End
@@ -56,7 +56,7 @@ Begin VB.Form frmSimpleRGB
             Height          =   255
             Index           =   0
             Left            =   120
-            TabIndex        =   67
+            TabIndex        =   66
             Top             =   240
             Width           =   375
          End
@@ -66,17 +66,8 @@ Begin VB.Form frmSimpleRGB
          Height          =   735
          Left            =   120
          TabIndex        =   60
-         Top             =   6960
-         Width           =   3495
-         Begin VB.CheckBox cbCCMselect 
-            Caption         =   "CCM: CCT"
-            Height          =   375
-            Left            =   2280
-            Style           =   1  'Graphical
-            TabIndex        =   65
-            Top             =   240
-            Width           =   1095
-         End
+         Top             =   6840
+         Width           =   2415
          Begin VB.CommandButton cmbGraphRangeOnce 
             Caption         =   "Rescale"
             Height          =   375
@@ -812,6 +803,17 @@ Begin VB.Form frmSimpleRGB
       TabIndex        =   3
       Top             =   240
       Width           =   2055
+      Begin VB.CheckBox cbXyUv 
+         Caption         =   "xy"
+         Height          =   255
+         Left            =   1440
+         Style           =   1  'Graphical
+         TabIndex        =   4
+         ToolTipText     =   "xy/uv Display Select"
+         Top             =   1080
+         Visible         =   0   'False
+         Width           =   615
+      End
       Begin VB.ComboBox cmbDisplay 
          Height          =   315
          ItemData        =   "frmSimpleRGB.frx":0CCA
@@ -852,17 +854,6 @@ Begin VB.Form frmSimpleRGB
          TabIndex        =   28
          Top             =   1440
          Width           =   2055
-      End
-      Begin VB.CheckBox cbXyUv 
-         Caption         =   "xy"
-         Height          =   255
-         Left            =   720
-         Style           =   1  'Graphical
-         TabIndex        =   4
-         ToolTipText     =   "xy/uv Display Select"
-         Top             =   840
-         Visible         =   0   'False
-         Width           =   735
       End
       Begin VB.CheckBox cbAutoRng 
          Caption         =   "High"
@@ -905,6 +896,16 @@ Begin VB.Form frmSimpleRGB
          TabIndex        =   5
          Top             =   360
          Width           =   735
+      End
+      Begin VB.CheckBox cbCCMselect 
+         Caption         =   "CCM: CCT"
+         Enabled         =   0   'False
+         Height          =   315
+         Left            =   0
+         Style           =   1  'Graphical
+         TabIndex        =   70
+         Top             =   780
+         Width           =   1455
       End
       Begin VB.Label lblGainAdjust 
          Alignment       =   1  'Right Justify
@@ -1184,6 +1185,8 @@ Private Sub cbCCMselect_Click()
     Else
         cbCCMselect.caption = "CCM: CCT"
     End If
+    lblCCT.Visible = Not (cbCCMselect.value = vbChecked)
+    lblLux.Visible = Not (cbCCMselect.value = vbChecked)
 End Sub
 
 Private Sub cbFilter_Click()

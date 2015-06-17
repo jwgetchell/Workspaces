@@ -2,7 +2,7 @@
 ;
 [Setup]
 AppName=Intersil RGB Chroma Meter
-AppVerName=Intersil RGB Chroma Meter 1.7.0
+AppVerName=Intersil RGB Chroma Meter 1.8.0
 DefaultDirName={pf}\Intersil\RGB Chroma Meter
 DefaultGroupName=Intersil\RGB Chroma Meter
 UninstallDisplayIcon={app}\Simple.RGB.exe

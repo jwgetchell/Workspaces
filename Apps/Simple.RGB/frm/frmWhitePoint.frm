@@ -266,9 +266,9 @@ Public oSheet As Excel.Worksheet
 Dim leg As Integer
 
 Private Sub cmdSetGrey_Click()
-    Dim xyz(2) As Double, rgb(2) As Double, i As Integer
+    Dim xyz(2) As Double, RGB(2) As Double, i As Integer
     
-    XYZ2sRGB xyz, rgb, 0 'clear 1st (zero values)
+    XYZ2sRGB xyz, RGB, 0 'clear 1st (zero values)
     cmdSetColor_Click 7
     
     For i = 0 To 31
@@ -279,7 +279,7 @@ Private Sub cmdSetGrey_Click()
         xyz(i) = frmSimpleRGB.getMeas(values.vXX + i)
     Next i
     
-    XYZ2sRGB xyz, rgb, 1 ' set
+    XYZ2sRGB xyz, RGB, 1 ' set
     
 End Sub
 
@@ -517,6 +517,7 @@ Private Sub tmrCalRGB_Timer()
         cmdSetGrey_Click
         cbLoopBorder.value = vbChecked: cbLoopBorder_Click
         frmSimpleRGB.cmbDisplay.ListIndex = 1
+        frmSimpleRGB.cbCCMselect.enabled = True
     End If
 End Sub
 
