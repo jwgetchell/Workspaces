@@ -105,7 +105,7 @@ public:
 	                                                      
 	static const long InterruptControl               =0x60;// interruptRegisters
 	static const long DataInvalidMask                =0x61;
-	static const long DetectionControl               =0x62;
+	static const long Detection                      =0x62;
 	static const long DetectionCondition1            =0x63;
 	static const long DetectionCondition2            =0x64;
 	static const long ReferenceDistanceforMotionMSB  =0x65;
@@ -127,7 +127,7 @@ public:
 	static const long Zone2ThresholdHighLSB          =0x75;
 	static const long Zone2ThresholdLowMSB           =0x76;
 	static const long Zone2ThresholdLowLSB           =0x77;
-	static const long Znee3ThresholdHighMSB          =0x78;
+	static const long Zone3ThresholdHighMSB          =0x78;
 	static const long Zone3ThresholdHighLSB          =0x79;
 	static const long Zone3ThresholdLowMSB           =0x7A;
 	static const long Zone3ThresholdLowLSB           =0x7B;
@@ -172,9 +172,9 @@ public:
 	static const long VGA1ControlforCollision        =0x9F;
 	static const long VGA2ControlforCollision        =0xA0;
 	static const long ADCVrefCode                    =0xA1;
-	static const long PeakDetectorThresholdsA        =0xA2;
-	static const long PeakDetectorThresholdsB        =0xA3;
-	static const long PeakDetectorThresholdsC        =0xA4;
+	static const long PeakDetectorThresholds0        =0xA2;
+	static const long PeakDetectorThresholds1        =0xA3;
+	static const long PeakDetectorThresholds2        =0xA4;
 	static const long EmitterVoltageADCOffset        =0xA5;
 	static const long EmitterVoltageADCMuxSelect     =0xA6;
 	static const long TempSensorRegA                 =0xA7;
@@ -182,7 +182,7 @@ public:
 	static const long TempSensorRegC                 =0xA9;
 	static const long TempSensorADCMode              =0xAA;
 	static const long BPFSelect                      =0xAB;
-	static const long OscillatorAAFOffset            =0xAC;
+	static const long Oscillator_AAFOffset           =0xAC;
 	static const long OscillatorSelect               =0xAD;
 	static const long InternalRSET                   =0xAE;
 	static const long Spares                         =0xAF;
@@ -313,15 +313,43 @@ void bitField::write(const uw data)
 Creg::Creg(CalsBase *base)
 {
 	i2cIO=new CalsPrxI2cIo(base);
-	samplingControlRegisters=   new CsamplingControlRegisters;
-	openLoopCorrectionRegisters=new CopenLoopCorrectionRegisters;
+	statusRegisters                =new CstatusRegisters;
+	samplingControlRegisters       =new CsamplingControlRegisters;
+	algorithmControlRegisters      =new CalgorithmControlRegisters;
+	signalIntegrityRegisters       =new CsignalIntegrityRegisters;
+	closedLoopCalibrationRegisters =new CclosedLoopCalibrationRegisters;
+	openLoopCorrectionRegisters    =new CopenLoopCorrectionRegisters;
+	interruptRegisters             =new CinterruptRegisters;
+	detectionModeControlRegisters  =new CdetectionModeControlRegisters;
+	analogControlRegisters         =new CanalogControlRegisters;
+	//DftRegisters                   =new CDftRegisters;
+	//fuseRegisters                  =new CfuseRegisters;
+	//digitalTestReg                 =new CdigitalTestReg; 
+	//lightSampleStatusRegisters     =new ClightSampleStatusRegisters;
+	//calibrationStatusRegisters     =new CcalibrationStatusRegisters;
+	//debuggingRegisters             =new CdebuggingRegisters;
 };
 Creg::~Creg()
 {
 	delete i2cIO;
+	delete statusRegisters;               
 	delete samplingControlRegisters;
+	delete algorithmControlRegisters;     
+	delete signalIntegrityRegisters;    
+	delete closedLoopCalibrationRegisters;
 	delete openLoopCorrectionRegisters;
+	delete interruptRegisters;  
+	delete detectionModeControlRegisters;
+	delete analogControlRegisters;
+	//delete DftRegisters;       
+	//delete fuseRegisters;                 
+	//delete digitalTestReg;                
+	//delete lightSampleStatusRegisters;
+	//delete calibrationStatusRegisters;   
+	//delete debuggingRegisters;   
 }
+
+#if 0
 
 Creg::CsamplingControlRegisters::CsamplingControlRegisters()
 	{
@@ -346,3 +374,9 @@ Creg::CopenLoopCorrectionRegisters::~CopenLoopCorrectionRegisters()
 		delete ol_phase_amb_co1;
 		delete ol_phase_amb_co2;
 	};
+
+#else
+
+#include "..\excelVBA\autoGen\registers.cpp"
+
+#endif

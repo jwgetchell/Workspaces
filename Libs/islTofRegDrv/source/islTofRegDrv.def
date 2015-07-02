@@ -2,21 +2,19 @@ LIBRARY      "islTofRegDrv"
 
 EXPORTS
 
-cSetAmbientCoeffs
-
-cGetStats
-cInitDriver
-cPrintTrace
-cResetDevice
-
 cSetDrvApi
 
-cIO
+getIRDR
+setIRDR
+getAFEgain
+setAFEgain
+getPhaseOffsetAmbientCoef
+setPhaseOffsetAmbientCoef
+getPhaseOffsetVGAcoef
+setPhaseOffsetVGAcoef
+
+cGetStats
 cWriteField
 cReadField
 
 
-VarPtr_
-memcpy_
-cpyAddr2byte_
-strcpy_

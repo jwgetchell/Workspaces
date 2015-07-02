@@ -35,6 +35,8 @@ public:
 	Creg(CalsBase* base);
 	~Creg();
 
+#if 0
+
 	//class CstatusRegisters	                {	}statusRegisters;
 
 	class CsamplingControlRegisters
@@ -45,8 +47,10 @@ public:
 
 		CsamplingControlRegisters();
 		~CsamplingControlRegisters();
-	};
-	CsamplingControlRegisters *samplingControlRegisters;
+	}*samplingControlRegisters;
+
+	//};
+	//CsamplingControlRegisters *samplingControlRegisters;
 
 	//class CalgorithmControlRegisters	    {	}algorithmControlRegisters;
 	//class CsignalIntegrityRegisters  	    {	}signalIntegrityRegisters;
@@ -73,6 +77,11 @@ public:
 	//class ClightSampleStatusRegisters       {	}lightSampleStatusRegisters;
 	//class CcalibrationStatusRegisters       {	}calibrationStatusRegisters;
 	//class CdebuggingRegisters               {	}debuggingRegisters;
+#else
+
+#include "..\excelVBA\autoGen\registers.h"
+
+#endif
 
 };
 

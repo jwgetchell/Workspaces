@@ -123,7 +123,6 @@ CalsPrxI2cIo::drvApi(ul rw,ul a,uw& d)
 	static uw ic2Addr;
 	t_status retVal=(t_status)callBackOk;
 	uw byte0,byte1;
-	ul ia;
 
 	if ( (pDrvApi) && (m_disableIO!=true) )
 	{

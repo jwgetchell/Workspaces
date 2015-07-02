@@ -65,50 +65,19 @@ CalsBase::setAmbientCoeffs(const uw exp,const dbl c1,const dbl c2)
 
 CalsBase::CalsBase()
 :m_Nreg(defaultRegMapSize)
-//,m_Nchannels(0)
-//,m_ic2Addr(0x88)
-//,m_deviceBaseAddr(0)
-
-//,m_inputSelectN(0)
-//,m_rangeN(0)
-//,m_resolutionN(0)
-//,m_runMode(0)
-//
-//,m_hwEnabled(false)
-//,m_stateMachineEnabled(false)
 ,m_byteIoOnly(false)
 ,m_regmap(0)
-//,m_cmdBase(0)
-//,m_reg(0)
-//
-//,m_alsConversionTime(100),m_lastTime(0),m_setTime(0)
-//,m_alsState(NULL),m_prxState(NULL),m_irState(NULL)
-//,m_NinputSelect(0),m_inputSelectList(0)
-//,m_Nrange(0),m_rangeList(0)
-//,m_Nresolution(0),m_resolutionList(0)
-//,m_Nirdr(0),m_irdrList(0)
-//,m_NintPersist(0),m_intPersistList(0)
-//,m_Nsleep(0),m_sleepList(0)
 ,m_IOinterceptEnabled(false)
 {
 	m_pReg=new Creg(this);
+	analogControlRegisters= new CanalogControlRegisters(this);
+
 	m_pDataStats[0]=0;
 	m_pDataStats[1]=0;
-	//m_intFlag[0]=0;
-	//m_intFlag[1]=0;
-	//m_activeState[0]=&m_alsState;
-	//m_activeState[1]=&m_prxState;
-	//checkOSVer();
 	m_pIO = new CalsPrxI2cIo(this);
-	//m_rgbCoeff = new CrgbCoeff;
 }
 CalsBase::~CalsBase()
 {
-	//if (m_reg)
-	//{
-	//	delete m_reg;
-	//	m_reg=NULL;
-	//}
 	if (m_regmap)
 	{
 		delete[] m_regmap;
@@ -121,196 +90,9 @@ CalsBase::~CalsBase()
 	}
 
 	delete m_pReg;
+	delete analogControlRegisters;
 
-	//if (m_alsState)
-	//{
-	//	delete m_alsState;
-	//	m_alsState=NULL;
-	//}
-	//if (m_prxState)
-	//{
-	//	delete m_prxState;
-	//	m_prxState=NULL;
-	//}
-	//if (m_irState)
-	//{
-	//	delete m_irState;
-	//	m_irState=NULL;
-	//}
 }
-//CalsBase::Cfunction::Cfunction()
-//:m_addr(0),m_shift(0),m_imask(0),m_mask(0),m_isVolatile(0)
-//{
-//}
-//CalsBase::CfunctionList::~CfunctionList()
-//{
-//        delete[] m_enable;
-//        delete[] m_intFlag;
-//        delete[] m_intPersist;
-//        delete[] m_data;
-//        delete[] m_threshLo;
-//        delete[] m_threshHi;
-//        delete[] m_inputSelect;
-//        delete[] m_range;
-//        delete[] m_resolution;
-//        delete m_irdr;
-//        delete m_runMode;
-//        delete m_irdrFreq;
-//        delete m_proxAmbRej;
-//		delete m_sleep;
-//		delete m_intLogic;
-//		delete m_test1;
-//		delete m_test2;
-//		// 29038
-//        delete m_proxIntEnable;
-//        delete m_proxOffset;
-//        delete[] m_irComp;
-//        delete m_proxIR;
-//        delete m_proxAlrm;
-//        delete m_vddAlrm;
-//		// 29177
-//        delete m_proxOffsetTick0;
-//        delete m_proxOffsetTick1;
-//        delete m_testEnable;
-//        delete m_regOtp;
-//        delete m_fuseReg;
-//
-//#if ( _DEBUG || _INCTRIM ) // 29038 trim
-//        delete m_proxTrim;
-//        delete m_irdrTrim;
-//        delete m_alsTrim;
-//		delete m_regOtpSel;
-//		delete m_otpData;
-//		delete m_fuseWrEn;
-//		delete m_fuseAddr;
-//
-//		delete m_otpDone;
-//		delete m_irdrDcPulse;
-//		delete m_golden;
-//		delete m_optRes;
-//		delete m_intTest;
-//#endif
-//}
-//CalsBase::CfunctionList::CfunctionList(uw* regTable)
-//{
-//        Cfunction* pFunc=NULL;
-//
-//        m_enable      = new Cfunction[2];
-//        m_intFlag     = new Cfunction[2];
-//        m_intPersist  = new Cfunction[2];
-//        m_data        = new Cfunction[3];
-//        m_threshLo    = new Cfunction[2];
-//        m_threshHi    = new Cfunction[2];
-//        m_inputSelect = new Cfunction[2];
-//        m_range       = new Cfunction[2];
-//        m_resolution  = new Cfunction[2];
-//        m_irComp      = new Cfunction[2];
-//        m_irdr        = new Cfunction;
-//        m_runMode     = new Cfunction;
-//        m_irdrFreq    = new Cfunction;
-//        m_proxAmbRej  = new Cfunction;
-//        m_sleep       = new Cfunction;
-//        m_intLogic    = new Cfunction;
-//        m_test1       = new Cfunction;
-//        m_test2       = new Cfunction;
-//		// 29038
-//        m_proxIntEnable = new Cfunction;                                            
-//        m_proxOffset    = new Cfunction;
-//        m_proxIR        = new Cfunction;
-//        m_proxAlrm      = new Cfunction;
-//        m_vddAlrm       = new Cfunction;
-//		// 29177
-//        m_proxOffsetTick0= new Cfunction;
-//        m_proxOffsetTick1= new Cfunction;
-//        m_testEnable=      new Cfunction;
-//        m_regOtp=          new Cfunction;
-//        m_fuseReg=         new Cfunction;
-//
-//#if ( _DEBUG || _INCTRIM ) // 29038 trim
-//        m_proxTrim = new Cfunction;                                            
-//        m_irdrTrim = new Cfunction;
-//        m_alsTrim  = new Cfunction;
-//
-//		m_regOtpSel=    new Cfunction;
-//		m_otpData=      new Cfunction;
-//		m_fuseWrEn=     new Cfunction;
-//		m_fuseAddr=     new Cfunction;
-//						new Cfunction;
-//		m_otpDone=      new Cfunction;
-//		m_irdrDcPulse=  new Cfunction;
-//		m_golden=       new Cfunction;
-//		m_optRes=       new Cfunction;
-//		m_intTest=      new Cfunction;
-//#endif
-//		 for (ul i=0;i<regTable[0];i+=5)
-//        {
-//                switch (regTable[i+1])
-//                {
-//                case regIdx::enable     :pFunc= &m_enable     [regTable[i+2]];break;
-//                case regIdx::intFlag    :pFunc= &m_intFlag    [regTable[i+2]];break;
-//                case regIdx::intPersist :pFunc= &m_intPersist [regTable[i+2]];break;
-//                case regIdx::data       :pFunc= &m_data       [regTable[i+2]];break;
-//                case regIdx::threshLo   :pFunc= &m_threshLo   [regTable[i+2]];break;
-//                case regIdx::threshHi   :pFunc= &m_threshHi   [regTable[i+2]];break;
-//                case regIdx::inputSelect:pFunc= &m_inputSelect[regTable[i+2]];break;
-//                case regIdx::range      :pFunc= &m_range      [regTable[i+2]];break;
-//                case regIdx::resolution :pFunc= &m_resolution [regTable[i+2]];break;
-//                case regIdx::irComp     :pFunc= &m_irComp     [regTable[i+2]];break;
-//                case regIdx::irdr       :pFunc=  m_irdr                      ;break;
-//                case regIdx::runMode    :pFunc=  m_runMode                   ;break;
-//                case regIdx::irdrFreq   :pFunc=  m_irdrFreq                  ;break;
-//                case regIdx::proxAmbRej :pFunc=  m_proxAmbRej                ;break;
-//                case regIdx::sleep      :pFunc=  m_sleep                     ;break;
-//                case regIdx::intLogic   :pFunc=  m_intLogic                  ;break;
-//                case regIdx::test1      :pFunc=  m_test1                     ;break;
-//                case regIdx::test2      :pFunc=  m_test2                     ;break;
-//					// 29038
-//                case regIdx::proxIntEnable:pFunc=  m_proxIntEnable             ;break;
-//                case regIdx::proxOffset   :pFunc=  m_proxOffset                ;break;
-//                case regIdx::proxIR       :pFunc=  m_proxIR                    ;break;
-//                case regIdx::proxAlrm     :pFunc=  m_proxAlrm                  ;break;
-//                case regIdx::vddAlrm      :pFunc=  m_vddAlrm                   ;break;
-//					// 29167
-//				case regIdx::proxOffsetTick0:pFunc=  m_proxOffsetTick0         ;break;
-//                case regIdx::proxOffsetTick1:pFunc=  m_proxOffsetTick1         ;break;
-//				case regIdx::testEnable     :pFunc=  m_testEnable              ;break;
-//				case regIdx::regOtp         :pFunc=  m_regOtp                  ;break;
-//				case regIdx::fuseReg        :pFunc=  m_fuseReg                 ;break;
-//#if ( _DEBUG || _INCTRIM ) // trim
-//                case regIdx::proxTrim     :pFunc=  m_proxTrim                  ;break;
-//                case regIdx::irdrTrim     :pFunc=  m_irdrTrim                  ;break;
-//                case regIdx::alsTrim      :pFunc=  m_alsTrim                   ;break;
-//
-//				case regIdx::regOtpSel    :pFunc=  m_regOtpSel                 ;break;
-//                case regIdx::otpData      :pFunc=  m_otpData                   ;break;
-//                case regIdx::fuseWrEn     :pFunc=  m_fuseWrEn                  ;break;
-//                case regIdx::fuseAddr     :pFunc=  m_fuseAddr                  ;break;
-//
-//                case regIdx::otpDone      :pFunc=  m_otpDone                   ;break;
-//                case regIdx::irdrDcPulse  :pFunc=  m_irdrDcPulse               ;break;
-//                case regIdx::golden       :pFunc=  m_golden                    ;break;
-//                case regIdx::optRes       :pFunc=  m_optRes                    ;break;
-//                case regIdx::intTest      :pFunc=  m_intTest                   ;break;
-//#endif
-//                default:pFunc=NULL;
-//                }
-//
-//                if (pFunc)
-//                {
-//                        pFunc->m_addr= regTable[i+3];
-//                        pFunc->m_shift=regTable[i+4];
-//                        pFunc->m_mask= regTable[i+5];
-//                        pFunc->m_imask=~(pFunc->m_mask << pFunc->m_shift);
-//                }
-//        }
-//        pFunc=NULL;
-//}
-//
-//CalsBase::CrgbCoeff::CrgbCoeff()
-//:alpha(1),beta(1),gamma(1),
-//Krg(0),Krb(0), Kgr(0),Kgb(0), Kbr(0),Kbg(0)
-//{
-//}
 
 
 
@@ -323,17 +105,6 @@ CalsBase::~CalsBase()
 
 
 
-
-//t_status CalsBase::checkOSVer()
-//{
-//#ifdef _WINDOWS
-//	OSVERSIONINFO osvi;
-//    osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
-//    GetVersionEx(&osvi);
-//	m_OSVer=osvi.dwMajorVersion+osvi.dwMinorVersion/10.0;
-//#endif
-//	return ok;
-//}
 
 t_status CalsBase::getError(uw e,char* msg)
 {

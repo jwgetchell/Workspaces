@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F961A578-850C-4A3B-A754-4EAFC505BFB8}"
 	ProjectSection(SolutionItems) = preProject
+		doc\HDS.29501.docx = doc\HDS.29501.docx
 		excelVBA\ISL29020.xlsm = excelVBA\ISL29020.xlsm
 		installers\ISL29020.xlsm.iss = installers\ISL29020.xlsm.iss
+		doc\isl29501_ds.pdf = doc\isl29501_ds.pdf
 		excelVBA\MSComm\IslMSComm.vbp = excelVBA\MSComm\IslMSComm.vbp
 		vb6\islTofRegDrv.vbp = vb6\islTofRegDrv.vbp
 		islTofRegDrv.xlsm = islTofRegDrv.xlsm
 		README.txt = README.txt
-		doc\SoftwareFunctionalSpecification.txt = doc\SoftwareFunctionalSpecification.txt
+		excelVBA\registers.xlsm = excelVBA\registers.xlsm
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "islTofRegDrv", "islTofRegDrv.vcxproj", "{C6EB755A-2C10-453C-A4F7-06186CF358F4}"

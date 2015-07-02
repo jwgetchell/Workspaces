@@ -5,26 +5,35 @@
 #endif
 
 #include "ALSbaseClass.h"
+#include "analogControlRegisters.h"
 #include "alsPrxI2cIo.h"
 #include "cApi.h"
 
 DLLAPI CresourceManager resMgr;
 DLLAPI CalsBase* pCalsBase=NULL;
 
-
-CAPI cSetAmbientCoeffs(uw e,dbl c1,dbl c2){	return pCalsBase->setAmbientCoeffs   (e,c1,c2);}
-CAPI cGetError(ul e,char* m)  {return pCalsBase->getError(e,m);}
-
-CAPI cGetMPAprimed(uw c,uw* v) {return pCalsBase->getMPAprimed(c,*v);}
-CAPI cGetStats(uw c,double *m, double *s) {return pCalsBase->getStats(c,*m,*s);}
-CAPI cInitDriver()  {return pCalsBase->initDriver() ;}
-CAPI cPrintTrace(char* msg) {return pCalsBase->printTrace(msg);}
-CAPI cResetDevice() {return pCalsBase->resetDevice();}
 CAPI cSetDrvApi(ul (fpApi *pF)(ul,ul,uw*,ul))  {pCalsBase->setDrvApi(pF);return pCalsBase->initDriver();}
-CAPI cGetPartNumber(uw* v){return pCalsBase->getPartNumber(*v);}
-CAPI cGetPartFamily(uw* v){return pCalsBase->getPartFamily(*v);}
 
-CAPI cIO(uw cmd,uw addr,uw* data) {return pCalsBase->m_pIO->drvApi(cmd,addr,*data);}
+// analogControlRegisters
+CAPI getIRDR(dbl* irdr)       {return pCalsBase->analogControlRegisters->getIRDR(*irdr);}
+CAPI setIRDR(dbl irdr)        {return pCalsBase->analogControlRegisters->setIRDR(irdr);}
+CAPI getAFEgain(uw* gain)     {return pCalsBase->analogControlRegisters->getAFEgain(*gain);}
+CAPI setAFEgain(const uw gain){return pCalsBase->analogControlRegisters->setAFEgain(gain);}
+
+
+//openLoopCorrectionRegisters
+CAPI getPhaseOffsetAmbientCoef(dbl* c1,dbl* c2)                   {return pCalsBase->getPhaseOffsetAmbientCoef(*c1,*c1);}
+CAPI setPhaseOffsetAmbientCoef(const dbl c1,const dbl c2)         {return pCalsBase->setPhaseOffsetAmbientCoef(c1,c2);}
+CAPI getPhaseOffsetVGAcoef(const uw vga,dbl* c1,dbl* c2)          {return pCalsBase->getPhaseOffsetVGAcoef(vga,*c1,*c1);}
+CAPI setPhaseOffsetVGAcoef(const uw vga,const dbl c1,const dbl c2){return pCalsBase->setPhaseOffsetVGAcoef(vga,c1,c2);}
+
+
+
+
+
+CAPI cGetError(ul e,char* m)  {return pCalsBase->getError(e,m);}
+CAPI cGetStats(uw c,double *m, double *s) {return pCalsBase->getStats(c,*m,*s);}
+
 CAPI cWriteField(uw addr,uc shift,uc mask,uc data) {return pCalsBase->m_pIO->write(addr,shift,mask,data);}
 CAPI cReadField(uw addr,uc shift,uc mask,uc* data) {return pCalsBase->m_pIO->read(addr,shift,mask,*data);}
 
@@ -37,6 +46,7 @@ CAPI cSetIOintEn      (uw x)
 	}
 	else
 	{
+		//pCalsBase->m_pReg->openLoopCorrectionRegisters->ol_i_vga1_co2->write(0);
 		return pCalsBase->setIOinterceptEnable(true);
 	}
 }

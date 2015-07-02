@@ -32,12 +32,18 @@
     <ClCompile Include="source\registers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\analogControlRegisters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\openLoopCorrectionRegisters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CanalogControlRegisters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="source\islTofRegDrv.def">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="vb6\clsIslTofRegDrv.bat">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
@@ -64,6 +70,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\registers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\analogControlRegisters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
