@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vbaComm", "vbaComm\vbaComm.csproj", "{0F927B2C-1034-4784-B753-D3017ECE800C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extras", "Extras", "{8544AD0F-67FF-44B5-AB7B-93BE2C834783}"
+	ProjectSection(SolutionItems) = preProject
+		doc\SerialPort Class (System.IO.Ports).url = doc\SerialPort Class (System.IO.Ports).url
+		vbaComm\vba\vbaComm.xlsm = vbaComm\vba\vbaComm.xlsm
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F927B2C-1034-4784-B753-D3017ECE800C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F927B2C-1034-4784-B753-D3017ECE800C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F927B2C-1034-4784-B753-D3017ECE800C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F927B2C-1034-4784-B753-D3017ECE800C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
