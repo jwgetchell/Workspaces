@@ -22,6 +22,7 @@ Begin VB.Form frmSimpleRGB
          Left            =   120
          TabIndex        =   69
          Top             =   4560
+         Visible         =   0   'False
          Width           =   7815
          _ExtentX        =   13785
          _ExtentY        =   4048
@@ -899,7 +900,6 @@ Begin VB.Form frmSimpleRGB
       End
       Begin VB.CheckBox cbCCMselect 
          Caption         =   "CCM: CCT"
-         Enabled         =   0   'False
          Height          =   315
          Left            =   0
          Style           =   1  'Graphical
@@ -1076,6 +1076,8 @@ Dim graphAutoRangeCounter As Integer: Const graphAutoRangeCounterReset As Intege
 
 Dim sRGBmtrx2(2, 3) As Double
 
+Public ucBarGraph_sRGB_setCaption As String
+
 Public Sub setMPAtrip(trip As Double)
     redMPA.setAvgTrip trip
     greenMPA.setAvgTrip trip
@@ -1182,8 +1184,10 @@ End Sub
 Private Sub cbCCMselect_Click()
     If cbCCMselect.value = vbChecked Then
         cbCCMselect.caption = "CCM: sRGB"
+        ucBarGraph_sRGB.Visible = True
     Else
         cbCCMselect.caption = "CCM: CCT"
+        ucBarGraph_sRGB.Visible = False
     End If
     lblCCT.Visible = Not (cbCCMselect.value = vbChecked)
     lblLux.Visible = Not (cbCCMselect.value = vbChecked)
@@ -1669,8 +1673,8 @@ skipLoad:
     graphAutoRangeCounter = graphAutoRangeCounterReset
     cbGraphAutoLock.value = vbChecked: cbGraphAutoLock_Click
     
-    ucBarGraph_sRGB.setCaption "sRGB"
-    
+    ucBarGraph_sRGB_setCaption = "sRGB:UNCALIBRATED"
+    ucBarGraph_sRGB.setCaption ucBarGraph_sRGB_setCaption
     loadDefaultSrgb
     
 endSub: End Sub
@@ -2163,9 +2167,9 @@ Private Sub tmrRead_Timer()
         updateDisplay values.vY, value(1)
         
         If cbCCMselect.value = vbUnchecked Then
-            ucBarGraph_sRGB.setCaption "sRGB"
+            ucBarGraph_sRGB.setCaption ucBarGraph_sRGB_setCaption
         Else
-            ucBarGraph_sRGB.setCaption "sRGB: " & guessColor(value(0), value(1))
+            ucBarGraph_sRGB.setCaption ucBarGraph_sRGB_setCaption & ": " & guessColor(value(0), value(1))
         End If
         
             

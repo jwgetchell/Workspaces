@@ -517,7 +517,9 @@ Private Sub tmrCalRGB_Timer()
         cmdSetGrey_Click
         cbLoopBorder.value = vbChecked: cbLoopBorder_Click
         frmSimpleRGB.cmbDisplay.ListIndex = 1
-        frmSimpleRGB.cbCCMselect.enabled = True
+        'frmSimpleRGB.cbCCMselect.enabled = True
+        frmSimpleRGB.ucBarGraph_sRGB_setCaption = "sRGB"
+        frmSimpleRGB.ucBarGraph_sRGB.setCaption frmSimpleRGB.ucBarGraph_sRGB_setCaption
     End If
 End Sub
 
