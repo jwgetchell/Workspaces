@@ -2,7 +2,23 @@
 
 #include "alsPrxTypes.h"
 #include "registers.h"
-#include "analogControlRegisters.h"
+
+#include "status.h"
+#include "samplingControl.h"
+#include "algorithmControl.h"
+#include "signalIntegrity.h"
+#include "closedLoopCalibration.h"
+#include "openLoopCorrection.h"
+#include "interrupt.h"
+#include "detectionModeControl.h"
+#include "analogControl.h"
+#include "dft.h"
+#include "fuse.h"
+#include "digitalTest.h"
+#include "lightSampleStatus.h"
+#include "calibrationStatus.h"
+#include "debugging.h"
+
 #include <time.h>
 
 class CalsPrxI2cIo;
@@ -78,7 +94,22 @@ public:
 		virtual t_status setByteIoOnly(const uw);
 		virtual t_status getByteIoOnly(uw&);
 
-		CanalogControlRegisters* analogControlRegisters;
+		Cstatus*                               status;
+		CsamplingControl*             samplingControl;
+		CalgorithmControl*           algorithmControl;
+		CsignalIntegrity*             signalIntegrity;
+		CclosedLoopCalibration* closedLoopCalibration;
+		CopenLoopCorrection*       openLoopCorrection;
+		Cinterrupt*                         interrupt;
+		CdetectionModeControl*   detectionModeControl;
+		CanalogControl*                 analogControl;
+		Cdft*                                     dft;
+		Cfuse*                                   fuse;
+		CdigitalTest*                     digitalTest;
+		ClightSampleStatus*         lightSampleStatus;
+		CcalibrationStatus*         calibrationStatus;
+		Cdebugging*                         debugging;
+
 		//// analogControlRegisters
 		//virtual t_status getIRDR(dbl&);
 		//virtual t_status setIRDR(const dbl);		

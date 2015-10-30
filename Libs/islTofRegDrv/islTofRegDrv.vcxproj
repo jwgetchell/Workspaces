@@ -120,7 +120,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;_INCTRIM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
@@ -174,29 +174,55 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\algorithmControl.cpp" />
     <ClCompile Include="source\ALSbaseClass.cpp" />
     <ClCompile Include="source\alsPrxI2cIo.cpp" />
-    <ClCompile Include="source\analogControlRegisters.cpp" />
+    <ClCompile Include="source\analogControl.cpp" />
     <ClCompile Include="source\avgStats.cpp" />
-    <ClCompile Include="source\CanalogControlRegisters.cpp" />
+    <ClCompile Include="source\calibrationStatus.cpp" />
     <ClCompile Include="source\cApi.cpp" />
-    <ClCompile Include="source\openLoopCorrectionRegisters.cpp" />
+    <ClCompile Include="source\closedLoopCalibration.cpp" />
+    <ClCompile Include="source\debugging.cpp" />
+    <ClCompile Include="source\detectionModeControl.cpp" />
+    <ClCompile Include="source\dft.cpp" />
+    <ClCompile Include="source\digitalTest.cpp" />
+    <ClCompile Include="source\fuse.cpp" />
+    <ClCompile Include="source\interrupt.cpp" />
+    <ClCompile Include="source\lightSampleStatus.cpp" />
+    <ClCompile Include="source\openLoopCorrection.cpp" />
     <ClCompile Include="source\registers.cpp" />
     <ClCompile Include="source\resMgr.cpp" />
+    <ClCompile Include="source\samplingControl.cpp" />
+    <ClCompile Include="source\signalIntegrity.cpp" />
+    <ClCompile Include="source\status.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source\islTofRegDrv.def" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\algorithmControl.h" />
     <ClInclude Include="source\ALSbaseClass.h" />
     <ClInclude Include="source\alsPrxI2cIo.h" />
     <ClInclude Include="source\alsPrxTypes.h" />
-    <ClInclude Include="source\analogControlRegisters.h" />
+    <ClInclude Include="source\analogControl.h" />
     <ClInclude Include="source\avgStats.h" />
-    <ClInclude Include="source\cApi.h" />
+    <ClInclude Include="source\calibrationStatus.h" />
+    <ClInclude Include="source\closedLoopCalibration.h" />
+    <ClInclude Include="source\debugging.h" />
+    <ClInclude Include="source\detectionModeControl.h" />
+    <ClInclude Include="source\dft.h" />
+    <ClInclude Include="source\digitalTest.h" />
+    <ClInclude Include="source\fuse.h" />
+    <ClInclude Include="source\interrupt.h" />
+    <ClInclude Include="source\lightSampleStatus.h" />
+    <ClInclude Include="source\openLoopCorrection.h" />
     <ClInclude Include="source\registers.h" />
     <ClInclude Include="source\resMgr.h" />
+    <ClInclude Include="source\samplingControl.h" />
+    <ClInclude Include="source\signalIntegrity.h" />
+    <ClInclude Include="source\status.h" />
     <ClInclude Include="source\stdafx.h" />
+    <ClInclude Include="source\targetver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

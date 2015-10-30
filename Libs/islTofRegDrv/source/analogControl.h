@@ -7,10 +7,10 @@
 class CalsBase;
 class Creg;
 
-class CanalogControlRegisters
+class CanalogControl
 {
 public:
-	CanalogControlRegisters(CalsBase*);
+	CanalogControl(CalsBase*);
 
 	CalsBase* m_pBase;
 	Creg* m_pReg;
@@ -25,5 +25,7 @@ public:
 	//virtual t_status setPhaseOffsetAmbientCoef(const dbl,const dbl);
 	//virtual t_status getPhaseOffsetVGAcoef(const uw,dbl&,dbl&);
 	//virtual t_status setPhaseOffsetVGAcoef(const uw,const dbl,const dbl);
+
+	#include "..\autoGen.cpp\analogControl.h"
 
 };

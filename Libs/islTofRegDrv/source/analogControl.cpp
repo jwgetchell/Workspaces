@@ -1,17 +1,17 @@
 #include "stdafx.h"
 #include "ALSbaseClass.h"
-#include "analogControlRegisters.h"
+#include "analogControl.h"
 #include "avgStats.h"
 
 using namespace alsEc;
 
-CanalogControlRegisters::CanalogControlRegisters(CalsBase* pBase)
+CanalogControl::CanalogControl(CalsBase* pBase)
 {
 	m_pBase=pBase;
 	m_pReg=m_pBase->m_pReg;
 }
 
-t_status CanalogControlRegisters::getIRDR(dbl& irdr)
+t_status CanalogControl::getIRDR(dbl& irdr)
 {
 	t_status ret=alsEc::ok;
 	uw msb=0,lsb=0;
@@ -24,7 +24,7 @@ t_status CanalogControlRegisters::getIRDR(dbl& irdr)
 	return ret;
 }
 
-t_status CanalogControlRegisters::setIRDR(const dbl irdrIn)
+t_status CanalogControl::setIRDR(const dbl irdrIn)
 {
 	t_status ret=alsEc::ok;
 	uw msb=0,lsb=0;
@@ -46,7 +46,7 @@ t_status CanalogControlRegisters::setIRDR(const dbl irdrIn)
 	return ret;
 }
 
-t_status CanalogControlRegisters::getAFEgain(uw& gain)
+t_status CanalogControl::getAFEgain(uw& gain)
 {
 	t_status ret=alsEc::ok;
 	uw lna,tia;
@@ -63,7 +63,7 @@ t_status CanalogControlRegisters::getAFEgain(uw& gain)
 	return ret;
 }
 
-t_status CanalogControlRegisters::setAFEgain(const uw gain)
+t_status CanalogControl::setAFEgain(const uw gain)
 {
 	t_status ret=alsEc::ok;
 
@@ -86,3 +86,5 @@ t_status CanalogControlRegisters::setAFEgain(const uw gain)
 	}
 	return ret;
 }
+
+#include "..\autoGen.cpp\analogControl.cpp"

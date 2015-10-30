@@ -2,6 +2,15 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F961A578-850C-4A3B-A754-4EAFC505BFB8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "islTofRegDrv", "islTofRegDrv.vcxproj", "{C6EB755A-2C10-453C-A4F7-06186CF358F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ax_islTofRegDrv", "Ax_islTofRegDrv\Ax_islTofRegDrv.csproj", "{E5372FBC-C78B-47F8-B1E8-BAF578424F05}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C6EB755A-2C10-453C-A4F7-06186CF358F4} = {C6EB755A-2C10-453C-A4F7-06186CF358F4}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extras", "Extras", "{DFC0BB20-CA74-4FEF-BCA7-CB36D996C8E6}"
 	ProjectSection(SolutionItems) = preProject
 		doc\HDS.29501.docx = doc\HDS.29501.docx
 		excelVBA\ISL29020.xlsm = excelVBA\ISL29020.xlsm
@@ -12,13 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		islTofRegDrv.xlsm = islTofRegDrv.xlsm
 		README.txt = README.txt
 		excelVBA\registers.xlsm = excelVBA\registers.xlsm
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "islTofRegDrv", "islTofRegDrv.vcxproj", "{C6EB755A-2C10-453C-A4F7-06186CF358F4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ax_islTofRegDrv", "Ax_islTofRegDrv\Ax_islTofRegDrv.csproj", "{E5372FBC-C78B-47F8-B1E8-BAF578424F05}"
-	ProjectSection(ProjectDependencies) = postProject
-		{C6EB755A-2C10-453C-A4F7-06186CF358F4} = {C6EB755A-2C10-453C-A4F7-06186CF358F4}
+		installers\registers.xlsm.iss = installers\registers.xlsm.iss
 	EndProjectSection
 EndProject
 Global
@@ -71,5 +74,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C6EB755A-2C10-453C-A4F7-06186CF358F4} = {F961A578-850C-4A3B-A754-4EAFC505BFB8}
 		{E5372FBC-C78B-47F8-B1E8-BAF578424F05} = {F961A578-850C-4A3B-A754-4EAFC505BFB8}
+		{DFC0BB20-CA74-4FEF-BCA7-CB36D996C8E6} = {F961A578-850C-4A3B-A754-4EAFC505BFB8}
 	EndGlobalSection
 EndGlobal

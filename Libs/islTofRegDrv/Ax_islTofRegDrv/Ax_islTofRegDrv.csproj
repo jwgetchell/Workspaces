@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ax_islTofRegDrv</RootNamespace>
     <AssemblyName>Ax_islTofRegDrv</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,6 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RegisterForComInterop>true</RegisterForComInterop>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -42,9 +44,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="autoGen.cs\IsamplingControl.ag.cs" />
+    <Compile Include="autoGen.cs\islTofRegDrv.dll.ag.cs" />
+    <Compile Include="Cio.cs" />
+    <Compile Include="class\CalgorithmControl.cs" />
+    <Compile Include="class\CanalogControl.cs" />
+    <Compile Include="class\CcalibrationStatus.cs" />
+    <Compile Include="class\CclosedLoopCalibration.cs" />
+    <Compile Include="class\Cdebugging.cs" />
+    <Compile Include="class\CdetectionModeControl.cs" />
+    <Compile Include="class\Cdft.cs" />
+    <Compile Include="class\CdigitalTest.cs" />
+    <Compile Include="class\Cfuse.cs" />
+    <Compile Include="class\Cinterrupt.cs" />
+    <Compile Include="class\ClightSampleStatus.cs" />
+    <Compile Include="class\CopenLoopCorrection.cs" />
+    <Compile Include="class\CsamplingControl.cs" />
+    <Compile Include="class\CsignalIntegrity.cs" />
+    <Compile Include="class\Cstatus.cs" />
+    <Compile Include="Cprim.cs" />
+    <Compile Include="Cui.cs" />
+    <Compile Include="Iio.cs" />
+    <Compile Include="interface\IalgorithmControl.cs" />
+    <Compile Include="interface\IanalogControl.cs" />
     <Compile Include="IAx_islTofRegDrv.cs" />
+    <Compile Include="interface\IcalibrationStatus.cs" />
+    <Compile Include="interface\IclosedLoopCalibration.cs" />
+    <Compile Include="interface\Idebugging.cs" />
+    <Compile Include="interface\IdetectionModeControl.cs" />
+    <Compile Include="interface\Idft.cs" />
+    <Compile Include="interface\IdigitalTest.cs" />
+    <Compile Include="interface\Ifuse.cs" />
+    <Compile Include="interface\Iinterrupt.cs" />
+    <Compile Include="interface\IlightSampleStatus.cs" />
+    <Compile Include="interface\IopenLoopCorrection.cs" />
+    <Compile Include="interface\IsamplingControl.cs" />
+    <Compile Include="interface\IsignalIntegrity.cs" />
+    <Compile Include="Iprim.cs" />
     <Compile Include="islTofRegDrv.cs" />
+    <Compile Include="islTofRegDrv.dll.cs" />
+    <Compile Include="interface\Istatus.cs" />
+    <Compile Include="autoGen.cs\CalgorithmControl.ag.cs" />
+    <Compile Include="autoGen.cs\CanalogControl.ag.cs" />
+    <Compile Include="autoGen.cs\CcalibrationStatus.ag.cs" />
+    <Compile Include="autoGen.cs\CclosedLoopCalibration.ag.cs" />
+    <Compile Include="autoGen.cs\Cdebugging.ag.cs" />
+    <Compile Include="autoGen.cs\CdetectionModeControl.ag.cs" />
+    <Compile Include="autoGen.cs\Cdft.ag.cs" />
+    <Compile Include="autoGen.cs\CdigitalTest.ag.cs" />
+    <Compile Include="autoGen.cs\Cfuse.ag.cs" />
+    <Compile Include="autoGen.cs\Cinterrupt.ag.cs" />
+    <Compile Include="autoGen.cs\ClightSampleStatus.ag.cs" />
+    <Compile Include="autoGen.cs\CopenLoopCorrection.ag.cs" />
+    <Compile Include="autoGen.cs\CsamplingControl.ag.cs" />
+    <Compile Include="autoGen.cs\CsignalIntegrity.ag.cs" />
+    <Compile Include="autoGen.cs\Cstatus.ag.cs" />
+    <Compile Include="autoGen.cs\IalgorithmControl.ag.cs" />
+    <Compile Include="autoGen.cs\IanalogControl.ag.cs" />
+    <Compile Include="autoGen.cs\IcalibrationStatus.ag.cs" />
+    <Compile Include="autoGen.cs\IclosedLoopCalibration.ag.cs" />
+    <Compile Include="autoGen.cs\Idebugging.ag.cs" />
+    <Compile Include="autoGen.cs\IdetectionModeControl.ag.cs" />
+    <Compile Include="autoGen.cs\Idft.ag.cs" />
+    <Compile Include="autoGen.cs\IdigitalTest.ag.cs" />
+    <Compile Include="autoGen.cs\Ifuse.ag.cs" />
+    <Compile Include="autoGen.cs\Iinterrupt.ag.cs" />
+    <Compile Include="autoGen.cs\IlightSampleStatus.ag.cs" />
+    <Compile Include="autoGen.cs\IopenLoopCorrection.ag.cs" />
+    <Compile Include="autoGen.cs\IsignalIntegrity.ag.cs" />
+    <Compile Include="autoGen.cs\Istatus.ag.cs" />
+    <Compile Include="Iui.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

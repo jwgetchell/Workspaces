@@ -52,9 +52,6 @@ CalsPrxI2cIo::trace(const char* s,const uw rw,const uw a,const uw d)
 {
 	static uw lrw=(uw)-1,la=(uw)-1,ld=(uw)-1;
 	static clock_t t0=0;
-	//uw ia=m_pBase->m_ic2Addr;
-
-	//pDrvApi(callBackCmd::rI2cAddr,ia,&ia,1);
 
 	if (!t0)
 		t0=clock();
@@ -126,14 +123,7 @@ CalsPrxI2cIo::drvApi(ul rw,ul a,uw& d)
 
 	if ( (pDrvApi) && (m_disableIO!=true) )
 	{
-		//if (ic2Addr!=m_pBase->m_ic2Addr)
-		//	retVal=pDrvApi(callBackCmd::wI2cAddr,ic2Addr=m_pBase->m_ic2Addr,&d,1);
-//#if 1
-//		pDrvApi(callBackCmd::rI2cAddr,0,&ia,1);
 		if (m_pBase->m_byteIoOnly)
-//#else
-//		if (m_pBase->m_byteIoOnly)
-//#endif
 		{
 			if (rw==callBackCmd::wWord)
 			{
@@ -298,18 +288,6 @@ CalsPrxI2cIo::write(const uw addr,const uw data)
 		return alsEc::usbError;
 }
 
-//t_status
-//CalsPrxI2cIo::write(const uw data)
-//{
-//	return write(m_pBase->m_cmdBase,data);
-//}
-//
-//t_status
-//CalsPrxI2cIo::write(const uc data)
-//{
-//	return write(m_pBase->m_cmdBase,data);
-//}
-
 t_status
 CalsPrxI2cIo::write(const uw addr,const uc data)
 {
@@ -335,95 +313,34 @@ t_status CalsPrxI2cIo::write(const uw addr,const uc shift,const uw mask,const uc
 t_status
 CalsPrxI2cIo::write(const bitField* f,const uw w)
 {
-    uw addr=f->addr,data=m_pBase->m_regmap[addr]& 0xFF;
+    uw addr=f->addr,data=m_pBase->m_regmap[addr]& 0xff;
+	//uc data=0;read(addr,data);
+
 	uw imask;
 	if (f->mask > 0xff)
 	{
-		imask = f->mask ^ 0xffff;
+		imask = ( (f->mask << f->shift) ^ 0xffff ) & 0xffff;
 	}
 	else
 	{
-		imask = f->mask ^ 0xff;
+		imask = ( (f->mask << f->shift) ^ 0xff ) & 0xff;
+
 	}
 
 	if (w>f->mask)
 		return alsEc::illegalValue;
 	else
 	{
-		if (f->mask>0xFF)
+		if (f->mask>0xff)
 			data |= (m_pBase->m_regmap[addr+1] & 0xFF) << 8;
 
 		data=(data & imask)
 			|( (w & f->mask) << f->shift );
 
-		if (f->mask>0xFF)
+		if (f->mask>0xff)
 			return write(addr,data);
 		else
 			return write(addr,(uc)data);
 	}
 }
 
-//t_status
-//CalsPrxI2cIo::writeI2c(const uw ia,const uw a,const uc d)
-//{
-//	uw da=m_pBase->m_ic2Addr,dummy=0;
-//
-//	m_skipDebugMap=true;
-//	t_status retVal=pDrvApi(callBackCmd::wI2cAddr,ia,&dummy,1);
-//
-//	if (retVal==callBackOk)
-//		write(a,d);
-//
-//	pDrvApi(callBackCmd::wI2cAddr,da,&dummy,1);
-//	m_skipDebugMap=false;
-//
-//	return alsEc::ok;
-//}
-//t_status
-//CalsPrxI2cIo::writeI2c(const uw ia,const uw a,const uw d)
-//{
-//	uw da=m_pBase->m_ic2Addr,dummy=0;
-//
-//	m_skipDebugMap=true;
-//	t_status retVal=pDrvApi(callBackCmd::wI2cAddr,ia,&dummy,1);
-//
-//	if (retVal==callBackOk)
-//		write(a,d);
-//
-//	pDrvApi(callBackCmd::wI2cAddr,da,&dummy,1);
-//	m_skipDebugMap=false;
-//
-//	return alsEc::ok;
-//}
-//t_status
-//CalsPrxI2cIo::readI2c(const uw ia,const uw a,uc& d)
-//{
-//	uw da=m_pBase->m_ic2Addr,dummy=0;
-//
-//	m_skipDebugMap=true;
-//	t_status retVal=pDrvApi(callBackCmd::wI2cAddr,ia,&dummy,1);
-//
-//	if (retVal==callBackOk)
-//		read(a,d);
-//
-//	pDrvApi(callBackCmd::wI2cAddr,da,&dummy,1);
-//	m_skipDebugMap=false;
-//
-//	return alsEc::ok;
-//}
-//t_status
-//CalsPrxI2cIo::readI2c(const uw ia,const uw a,uw& d)
-//{
-//	uw da=m_pBase->m_ic2Addr,dummy=0;
-//
-//	m_skipDebugMap=true;
-//	t_status retVal=pDrvApi(callBackCmd::wI2cAddr,ia,&dummy,1);
-//
-//	if (retVal==callBackOk)
-//		read(a,d);
-//
-//	pDrvApi(callBackCmd::wI2cAddr,da,&dummy,1);
-//	m_skipDebugMap=false;
-//
-//	return alsEc::ok;
-//}

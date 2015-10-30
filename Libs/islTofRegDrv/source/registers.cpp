@@ -189,8 +189,8 @@ public:
 	static const long Command                        =0xB0;// DFTregisters
 	static const long I2CFast                        =0xB1;
 	static const long RivisionID                     =0xB2;
-	static const long BlockOverrideA                 =0xB3;
-	static const long BlockOverrideB                 =0xB4;
+	static const long BlockOverride1                 =0xB3;
+	static const long BlockOverride2                 =0xB4;
 	static const long StateMachineControl            =0xB5;
 	static const long StateMachineOverride           =0xB6;
 	static const long StateMachineOverride1          =0xB7;
@@ -273,11 +273,11 @@ public:
 
 static CalsPrxI2cIo *i2cIO=NULL;
 
-long bitField::byteSwap(uw dIn)
-{
-	return (dIn & 0x00ff) << 8 |
-		   (dIn & 0xff00) >> 8;
-}
+//long bitField::byteSwap(uw dIn)
+//{
+//	return (dIn & 0x00ff) << 8 |
+//		   (dIn & 0xff00) >> 8;
+//}
 
 long bitField::read()
 {
@@ -287,7 +287,7 @@ long bitField::read()
 	if (mask>0xff)
 	{
 		i2cIO->read(addr,wData);
-		wData=byteSwap(wData);
+		//wData=byteSwap(wData);
 		return (wData >> shift) & mask;	
 	}
 	else
@@ -301,7 +301,8 @@ void bitField::write(const uw data)
 {
 	if (mask>0xff)
 	{
-		i2cIO->write(addr,((byteSwap(data) & mask) << shift));
+		//i2cIO->write(addr,((byteSwap(data) & mask) << shift));
+		i2cIO->write(addr,((data & mask) << shift));
 	}
 	else
 	{
@@ -322,10 +323,10 @@ Creg::Creg(CalsBase *base)
 	interruptRegisters             =new CinterruptRegisters;
 	detectionModeControlRegisters  =new CdetectionModeControlRegisters;
 	analogControlRegisters         =new CanalogControlRegisters;
-	//DftRegisters                   =new CDftRegisters;
-	//fuseRegisters                  =new CfuseRegisters;
-	//digitalTestReg                 =new CdigitalTestReg; 
-	//lightSampleStatusRegisters     =new ClightSampleStatusRegisters;
+	dftRegisters                   =new CdftRegisters;
+	fuseRegisters                  =new CfuseRegisters;
+	digitalTestRegisters           =new CdigitalTestRegisters; 
+	lightSampleStatusRegisters     =new ClightSampleStatusRegisters;
 	//calibrationStatusRegisters     =new CcalibrationStatusRegisters;
 	//debuggingRegisters             =new CdebuggingRegisters;
 };
@@ -341,10 +342,10 @@ Creg::~Creg()
 	delete interruptRegisters;  
 	delete detectionModeControlRegisters;
 	delete analogControlRegisters;
-	//delete DftRegisters;       
-	//delete fuseRegisters;                 
-	//delete digitalTestReg;                
-	//delete lightSampleStatusRegisters;
+	delete dftRegisters;       
+	delete fuseRegisters;                 
+	delete digitalTestRegisters;                
+	delete lightSampleStatusRegisters;
 	//delete calibrationStatusRegisters;   
 	//delete debuggingRegisters;   
 }
@@ -377,6 +378,6 @@ Creg::CopenLoopCorrectionRegisters::~CopenLoopCorrectionRegisters()
 
 #else
 
-#include "..\excelVBA\autoGen\registers.cpp"
+#include "..\autoGen.cpp\registers.cpp"
 
 #endif

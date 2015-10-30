@@ -70,7 +70,22 @@ CalsBase::CalsBase()
 ,m_IOinterceptEnabled(false)
 {
 	m_pReg=new Creg(this);
-	analogControlRegisters= new CanalogControlRegisters(this);
+
+	status=                new                Cstatus(this);
+	samplingControl=       new       CsamplingControl(this);
+	algorithmControl=      new      CalgorithmControl(this);
+	signalIntegrity=       new       CsignalIntegrity(this);
+	closedLoopCalibration= new CclosedLoopCalibration(this);
+	openLoopCorrection=    new    CopenLoopCorrection(this);
+	interrupt=             new             Cinterrupt(this);
+	detectionModeControl=  new  CdetectionModeControl(this);
+	analogControl=         new         CanalogControl(this);
+	dft=                   new                   Cdft(this);
+	fuse=                  new                  Cfuse(this);
+	digitalTest=           new           CdigitalTest(this);
+	lightSampleStatus=     new     ClightSampleStatus(this);
+	calibrationStatus=     new     CcalibrationStatus(this);
+	debugging=             new             Cdebugging(this);
 
 	m_pDataStats[0]=0;
 	m_pDataStats[1]=0;
@@ -90,7 +105,22 @@ CalsBase::~CalsBase()
 	}
 
 	delete m_pReg;
-	delete analogControlRegisters;
+
+	delete                status;
+	delete       samplingControl;
+	delete      algorithmControl;
+	delete       signalIntegrity;
+	delete closedLoopCalibration;
+	delete    openLoopCorrection;
+	delete             interrupt;
+	delete  detectionModeControl;
+	delete         analogControl;
+	delete                   dft;
+	delete                  fuse;
+	delete           digitalTest;
+	delete     lightSampleStatus;
+	delete     calibrationStatus;
+	delete             debugging;
 
 }
 
@@ -155,22 +185,13 @@ t_status CalsBase::initDevice()
 
 	if ((status=resetDevice()))
 		goto error;
-	//if ((status=measureConversionTime(m_alsConversionTime)))
-	//	goto error;
 	if ((status=resetDevice()))
 		goto error;
-	//if ((status=alignLuxRanges()))
-	//	goto error;
 
 	return status;// good return
 error:PrintTrace("CalsBase::initDevice FAIL");
 	return status;// error here
 }
-
-//t_status CalsBase::alignLuxRanges()
-//{
-//	return notImplemented;
-//}
 
 t_status CalsBase::initDriver()
 {
@@ -182,37 +203,10 @@ t_status CalsBase::initDriver()
 	PrintTrace("CalsBase::initDriver Started");
 	if ((status=initRegisters()))
 		goto error;
-	//if ((status=initInputSelect()))
-	//	goto error;
-	//if ((status=initRange()))
-	//	goto error;
-	//if ((status=initResolution()))
-	//	goto error;
-	//if ((status=initIrdr()))
-	//	goto error;
-	//if ((status=initIntPersist()))
-	//	goto error;
-	//if ((status=initSleep()))
-	//	goto error;
 	if ((status=initCalibration()))
 		goto error;
-	//if (m_stateMachineEnabled)
-	//{
-		//if ((status=initStateMachine()))
-		//	goto error;
-	//}
 	if ((status=initDevice()))
 		goto error;
-	//if (m_stateMachineEnabled)
-	//	{
-	//	if ((status=(*m_activeState[0])->set()))
-	//		goto error;
-	//	if (m_Nchannels>1)
-	//	{
-	//		if ((status=(*m_activeState[1])->set()))
-	//			goto error;
-	//	}
-	//}
 	PrintTrace("CalsBase::initDriver Success");
  	return ok;// good exit
 error:
@@ -246,233 +240,6 @@ CalsBase::initRegisters()
 
 	return ok;
 }
-//	// ___________
-//	// InputSelect
-//	// ===========
-//
-//t_status
-//CalsBase::getNinputSelect(const uw c,uw& v)
-//{
-//	if (c<m_Nchannels)
-//	{
-//		if (c)
-//			v=1;
-//		else
-//			v=m_NinputSelect;
-//		return ok;
-//	}
-//	else
-//		return illegalChannel;
-//}
-//
-//t_status
-//CalsBase::getInputSelectList(const uw c,char* v)
-//{
-//	ul i,j=0;
-//	if (c<m_Nchannels)
-//	{
-//		if (c)
-//			strcpy(v,"Prox");
-//		else
-//			for (i=0;i<m_NinputSelect;i++)
-//			{
-//				strcpy((v+j),m_inputSelectList[i]);
-//				j+=(strlen(m_inputSelectList[i])+1);
-//			}
-//		return ok;
-//	}
-//	else
-//		return illegalChannel;
-//}
-//
-//	// _____
-//	// Range
-//	// =====
-//
-//t_status
-//CalsBase::getNrange(const uw c,uw& v)
-//{
-//	if (c<m_Nchannels)
-//	{
-//		if (c)
-//			v=1;
-//		else
-//			v=m_Nrange;
-//		return ok;
-//	}
-//	else
-//		return illegalChannel;
-//}
-//
-//t_status
-//CalsBase::getRangeList(const uw c,uw* v)
-//{
-//	if (c<m_Nchannels)
-//	{
-//		if (c)
-//			*v=1;
-//		else
-//			memcpy(v,m_rangeList,m_Nrange*sizeof(m_rangeList[0]));
-//		return ok;
-//	}
-//	else
-//		return illegalChannel;
-//}
-//
-//t_status 
-//CalsBase::getRange(uw& r)
-//{
-//	return getRange(0,r);
-//}
-//
-//t_status 
-//CalsBase::getRange(const uw c,uw& r)
-//{
-//        if (c<m_Nchannels)
-//        {
-//                t_status status=m_pIO->read(&m_reg->m_range[c],r);
-//				if (!c) m_rangeN=r;
-//				return status;
-//        }
-//        else
-//        {
-//                return illegalChannel;
-//        }
-//}
-//
-//	// __________
-//	// IntPersist
-//	// ==========
-//t_status
-//CalsBase::initIntPersist()
-//{
-//	static uw prt[]={1 // ___________________________
-//			        ,4 // Define intPersist list here
-//			        ,8 // ===========================
-//			        ,16
-//			        };
-//	m_NintPersist=sizeof(prt)/sizeof(prt[0]);
-//	m_intPersistList=prt;
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::getNintPersist(const uw c,uw& v)
-//{
-//	v=m_NintPersist;
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::getIntPersistList(const uw c,uw* v)
-//{
-//	memcpy(v,m_intPersistList,m_NintPersist*sizeof(m_intPersistList[0]));
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::setIntPersist(const uw v)
-//{
-//	return setIntPersist(0,v);
-//}
-//
-//t_status
-//CalsBase::setIntPersist(const uw c,const uw v)
-//{
-//	if (c<m_Nchannels)
-//		return m_pIO->write(&m_reg->m_intPersist[c],v);
-//	else
-//		return illegalChannel;
-//}
-//
-//t_status
-//CalsBase::getIntPersist(uw& v)
-//{
-//	return getIntPersist(0,v);
-//}
-//
-//t_status
-//CalsBase::getIntPersist(const uw c,uw& v)
-//{
-//	if (c<m_Nchannels)
-//		return m_pIO->read(&m_reg->m_intPersist[c],v);
-//	else
-//		return illegalChannel;
-//}
-//
-//t_status
-//CalsBase::getNchannel(uw &v)
-//{
-//	v=m_Nchannels;
-//	return ok;
-//}
-//
-//
-//	// _______
-//	// IntFlag
-//	// =======
-//
-//t_status
-//CalsBase::getIntFlagMem(uw& v)
-//{
-//	return getIntFlagMem((uw)0,v);
-//}
-//t_status
-//CalsBase::getIntFlagMem(const uw c,uw& v)
-//{
-//	getIntFlag(c,v);
-//	v|=m_intFlag[c];
-//	m_intFlag[c]=0;// clear on read by user
-//	return ok;
-//}
-//t_status
-//CalsBase::getIntFlag(uw& v)
-//{
-//	return getIntFlag(0,v);
-//}
-//t_status
-//CalsBase::getIntFlag(const uw c,uw& v)
-//{
-//	t_status status=ok;
-//	if (c<m_Nchannels)
-//	{
-//		status=m_pIO->read(&m_reg->m_intFlag[c],v);
-//		m_intFlag[c] |= v;
-//		return status;
-//	}
-//	else
-//		return illegalChannel;
-//}
-//
-//	// ____
-//	// Irdr
-//	// ====
-//
-//t_status
-//CalsBase::getNirdr(uw& v)
-//{
-//	v=m_Nirdr;
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::getIrdrList(uw* v)
-//{
-//	memcpy(v,m_irdrList,m_Nirdr*sizeof(m_irdrList[0]));
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::setIrdr(const uw v)
-//{
-//	return m_pIO->write(m_reg->m_irdr,v);
-//}
-//
-//t_status
-//CalsBase::getIrdr(uw& v)
-//{
-//	return m_pIO->read(m_reg->m_irdr,v);
-//}
 
 t_status
 CalsBase::getMPAprimed(uw& v)
@@ -486,139 +253,6 @@ CalsBase::getMPAprimed(const uw c,uw& v)
 	return m_pDataStats[c]->getMPAprimed(v);
 }
 
-//t_status
-//CalsBase::checkTimer(const uw c)
-//{
-//	t_status status=alsEc::ok;
-//
-//	// m_lastTime is the last time data was read from HW
-//	// set in CalsBase::getData override
-//	clock_t now,sinceLastRead=((now=clock())-m_lastTime)*1000/CLOCKS_PER_SEC;
-//
-//	static uw time=2*m_alsConversionTime;
-//	uw chan;
-//
-//
-//	if (sinceLastRead>m_alsConversionTime)
-//	{
-//		// m_setTime is the time when the sequence selection was made
-//		// set in CstateMachine::set
-//		// Note:2 conversions are allowed for sequence change settling
-//		now-=m_setTime;
-////		if ( (now*1000/CLOCKS_PER_SEC) > (clock_t)time )
-//		if ( now > (clock_t)time )
-//		{
-//			for (chan=0;chan<m_Nchannels;chan++)
-//			{
-//				//if ((status=(*m_activeState[chan])->call(time)))
-//				//	return status;
-//			}
-//		}
-//	}
-//	return status;
-//}
-//
-//t_status
-//CalsBase::setLux(const uw alsLogicalState)
-//{
-//	// called from state machine
-//	t_status status=m_pDataStats[0]->getData(m_alsValue.value);
-//
-//	if (ok==status)
-//	{
-//		status=m_pDataStats[0]->getStats(m_alsValue.mean,m_alsValue.stdDev);
-//		if (ok==status)
-//			m_alsValue.logicalState=alsLogicalState;
-//	}
-//	return status;
-//}
-//
-//t_status
-//CalsBase::getLux(dbl& c)
-//{
-//	t_status status;
-//
-//	if ((status=checkTimer(0)))
-//		return status;
-//
-//	c=m_alsValue.value;
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::getLuxState(uw& alsLogicalState)
-//{
-//	alsLogicalState=m_alsValue.logicalState;
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::setProximity(const uw prxLogicalState)
-//{
-//	// called from state machine
-//	t_status status=m_pDataStats[m_Nchannels-1]->getData(m_prxValue.value);
-//
-//	if (ok==status)
-//	{
-//		status=m_pDataStats[m_Nchannels-1]->getStats(m_prxValue.mean,m_prxValue.stdDev);
-//		if (ok==status)
-//			m_prxValue.logicalState=prxLogicalState;
-//	}
-//	return status;
-//}
-//
-//t_status
-//CalsBase::getProximity(dbl& c)
-//{
-//	t_status status;
-//
-//	if ((status=checkTimer(m_Nchannels-1)))
-//		return status;
-//
-//	c=m_prxValue.value;
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::getProximityState(uw& prxLogicalState)
-//{
-//	prxLogicalState=m_prxValue.logicalState;
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::setIR(const uw irLogicalState)
-//{
-//	// called from state machine
-//	t_status status=m_pDataStats[0]->getData(m_irValue.value);
-//
-//	if (ok==status)
-//	{
-//		status=m_pDataStats[0]->getStats(m_irValue.mean,m_irValue.stdDev);
-//		if (ok==status)
-//			m_irValue.logicalState=irLogicalState;
-//	}
-//	return status;
-//}
-//
-//t_status
-//CalsBase::getIR(dbl& c)
-//{
-//	t_status status;
-//
-//	if ((status=checkTimer(0)))
-//		return status;
-//
-//	c=m_irValue.value;
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::getIRState(uw& irLogicalState)
-//{
-//	irLogicalState=m_irValue.logicalState;
-//	return ok;
-//}
 
 
 t_status
@@ -645,218 +279,17 @@ CalsBase::getStats(const uw c, double &m, double &s)
 t_status CalsBase::getStats(double &m, double &s){return getStats(0,m,s);}
 t_status CalsBase::setMPAsize(const uw v){return setMPAsize(0,v);}
 
-//t_status CalsBase::getThreshHi(const uw c,double &v){return notImplemented;}
-//t_status CalsBase::setThreshHi(const uw c,double  v){return notImplemented;}
-//t_status CalsBase::getThreshLo(const uw c,double &v){return notImplemented;}
-//t_status CalsBase::setThreshLo(const uw c,double  v){return notImplemented;}
-
-//#define Get(x)     t_status CalsBase:: x (           uw&      v){return notImplemented;}
-//#define Set(x)     t_status CalsBase:: x (           const uw v){return notImplemented;}
-//#define Get0(x)    t_status CalsBase:: x (           uw&      v){return x (0,v);}
-//#define Set0(x)    t_status CalsBase:: x (           const uw v){return x (0,v);}
-//#define chanGet(x) t_status CalsBase:: x (const uw c,uw&      v){return notImplemented;};Get0(x)
-//#define chanSet(x) t_status CalsBase:: x (const uw c,const uw v){return notImplemented;};Set0(x)
-//
-//	chanGet(getData)
-//	chanGet(getEnable)       chanSet(setEnable)
-//	//chanGet(getThreshHi)     chanSet(setThreshHi)
-//	//chanGet(getThreshLo)     chanSet(setThreshLo)
-//	chanGet(getInputSelect)  chanSet(setInputSelect)
-//	chanGet(getResolution)   chanSet(setResolution)
-//	
-//	Get(getRunMode)          Set(setRunMode)
-//	Get(getProxAmbRej)       Set(setProxAmbRej)
-//	Get(getIrdrFreq)         Set(setIrdrFreq)
-//	Get(getSleep)            Set(setSleep)
-//	Get(getIntLogic)         Set(setIntLogic)
-//	
-//	chanSet(setRange)
-//
-//#undef chanSet
-//#undef chanGet
-//#undef Set0
-//#undef Get0
-//#undef Set
-//#undef Get
 
 #define baseDef(x) t_status CalsBase:: x {return notImplemented;}
 #define stubOk(x) t_status CalsBase:: x {return ok;}
 
 baseDef(setMPAsize(const uw c,const uw v))
-//baseDef(preStateIntMask(const uw chan,CstateMachine* state))
 
 baseDef(resetDevice())
 
-//baseDef(initInputSelect())
-//baseDef(initRange())
-//baseDef(initResolution())
-//baseDef(initIrdr())
-//
-//stubOk(initSleep())
-
 baseDef(initCalibration())
 
-//baseDef(getNresolution(const uw c, uw& n))
-//baseDef(getResolutionList(const uw c, uw* n))
-//	
-//baseDef(getNsleep(uw& n))
-//baseDef(getSleepList(uw* n))
-//
 baseDef(setPdataStats(const uw))
-//
-//#undef baseDef
-//
-//	// ________
-//	// ThreshLo
-//	// ========
-//
-//t_status
-//CalsBase::getThreshLo(const uw c,uw& v){return notImplemented;}
-//
-//t_status
-//CalsBase::getThreshLo(uw& v){return getThreshLo((uw)0,v);}
-//
-//t_status
-//CalsBase::getThreshLo(const uw c,dbl& v)
-//{
-//	t_status status;
-//	uw m;
-//
-//	if (ok==(status=getThreshLo(c,m)))
-//	{
-//		return m_pDataStats[c]->getReal(m,v);
-//	}
-//
-//	return status;
-//}
-//
-//t_status
-//CalsBase::getThreshLo(dbl& v){return getThreshLo((uw)0,v);}
-//
-//t_status
-//CalsBase::setThreshLo(const uw c,const uw v){return notImplemented;}
-//
-//t_status
-//CalsBase::setThreshLo(const uw v){return setThreshLo((uw)0,v);}
-//
-//t_status
-//CalsBase::setThreshLo(const uw c,const dbl v)
-//{
-//	t_status status;
-//	uw m;
-//
-//	if (ok==(status=m_pDataStats[c]->getWord(v,m)))
-//	{
-//		return setThreshLo(c,m);
-//	}
-//
-//	return status;
-//}
-//
-//t_status
-//CalsBase::setThreshLo(const dbl v){return setThreshLo((uw)0,v);}
-//
-//	// ________
-//	// ThreshHi
-//	// ========
-//
-//t_status
-//CalsBase::getThreshHi(const uw c,uw& v){return notImplemented;}
-//
-//t_status
-//CalsBase::getThreshHi(uw& v){return getThreshHi((uw)0,v);}
-//
-//t_status
-//CalsBase::getThreshHi(const uw c,dbl& v)
-//{
-//	t_status status;
-//	uw m;
-//
-//	if (ok==(status=getThreshHi(c,m)))
-//	{
-//		return m_pDataStats[c]->getReal(m,v);
-//	}
-//
-//	return status;
-//}
-//
-//t_status
-//CalsBase::getThreshHi(dbl& v){return getThreshHi((uw)0,v);}
-//
-//t_status
-//CalsBase::setThreshHi(const uw c,const uw v){return notImplemented;}
-//
-//t_status
-//CalsBase::setThreshHi(const uw v){return setThreshHi((uw)0,v);}
-//
-//t_status
-//CalsBase::setThreshHi(const uw c,const dbl v)
-//{
-//	t_status status;
-//	uw m;
-//
-//	if (ok==(status=m_pDataStats[c]->getWord(v,m)))
-//	{
-//		return setThreshHi(c,m);
-//	}
-//
-//	return status;
-//}
-//
-//t_status
-//CalsBase::setThreshHi(const dbl v){return setThreshHi((uw)0,v);}
-//
-//t_status
-//CalsBase::measureConversionTime(uw& alsConversionTime)
-//{
-//	//int i;
-//	//uw intFlag=0,flagCount=0;
-//	//clock_t thisTime=0,lastTime=clock();
-//
-//	//setEnable(0,1);       // start conversions
-//	////setIntPersist(0,0);   // set int persist to 1
-//	//setThreshHi(0,(uw)0); // force interrupt
-//	//setInputSelect(0,0);  // ALS
-//	//getIntFlag(0,intFlag);// clear Flag
-//	//setEnable(0,0);       // disable
-//	//if (m_Nchannels>1) setEnable(1,0);
-//	//lastTime=clock();thisTime=lastTime;
-//	//setEnable(0,1);// start conversions
-//
-//	//for (i=0;i<1000;i++)
-//	//{
-//	//	getIntFlag(0,intFlag);
-//	//	if (intFlag)
-//	//	{
-//	//		thisTime=clock();
-//	//		if ( (++flagCount) >= 100)
-//	//			break;
-//	//	}
-//	//}
-//
-//	//if (flagCount)
-//	//{
-//	//	alsConversionTime=(thisTime-lastTime)/flagCount*1000/CLOCKS_PER_SEC;
-//	//	m_alsConversionTime=alsConversionTime;
-//	//}
-//	//else
-//		alsConversionTime=0;//fail
-//
-//	return ok;
-//}
-//t_status
-//CalsBase::getConversionTime(const uw c,uw& t)
-//{
-//	t=m_alsConversionTime;
-//	return ok;
-//}
-//
-//t_status
-//CalsBase::setConversionTime(const uw c,const uw t)
-//{
-//	m_alsConversionTime=t;
-//	return ok;
-//}
 
 t_status
 CalsBase::getPartNumber(uw& n)
@@ -872,76 +305,12 @@ CalsBase::getPartFamily(uw& n)
 	return ok;
 }
 
-//	// ____________
-//	// StateMachine
-//	// ============
-//
-//t_status
-//CalsBase::initAlsStateMachine()
-//{
-//	return notImplemented;
-//}
-//
-//t_status
-//CalsBase::initProximityStateMachine()
-//{
-//	return notImplemented;
-//}
-//
-//t_status
-//CalsBase::initIrStateMachine()
-//{
-//	return notImplemented;
-//}
-//
-//t_status
-//CalsBase::initStateMachine()
-//{
-//	PrintTrace("CalsBase::initStateMachine, disabling I/O");
-//	t_status status=notImplemented;
-//
-//	m_pIO->disableIO();
-//
-//	if (!initAlsStateMachine())
-//		status=ok;
-//
-//	if (!initProximityStateMachine())
-//		status=ok;
-//
-//	if (!initIrStateMachine())
-//		status=ok;
-//
-//	m_pIO->enableIO();
-//
-//	PrintTrace("CalsBase::initStateMachine Done, I/O enabled");
-//	return status;
-//}
 
 t_status
 CalsBase::printTrace(const char* msg)
 {
 	return m_pIO->printTrace(msg);
 }
-
-//t_status CalsBase::setStateMachineEnable(const uw enable)
-//{
-//	if (enable)
-//		m_stateMachineEnabled=true;
-//	else
-//		m_stateMachineEnabled=false;
-//
-//	return ok;
-//}
-//
-//t_status CalsBase::getStateMachineEnable(uw& enable)
-//{
-//	if (m_stateMachineEnabled)
-//		enable=1;
-//	else
-//		enable=0;
-//
-//	return ok;
-//}
 
 t_status CalsBase::setByteIoOnly(const uw enable)
 {
@@ -963,74 +332,3 @@ t_status CalsBase::getByteIoOnly(uw& enable)
 	return ok;
 }
 
-//t_status CalsBase::getProxIR(dbl& v,uw& x){return notImplemented;}
-//
-//	// ___________
-//	// 29038 Stubs
-//	// ===========
-//
-//t_status CalsBase::setProxIntEnable(const  uw  x){return notImplemented;}
-//t_status CalsBase::getProxIntEnable(       uw& x){return notImplemented;}
-//t_status CalsBase::setProxOffset   (       uw& x){return notImplemented;}
-//t_status CalsBase::getProxOffset   (       uw& x){return notImplemented;}
-//t_status CalsBase::setIRcomp       (const  uw  x){return notImplemented;}
-//t_status CalsBase::getIRcomp       (       uw& x){return notImplemented;}
-//t_status CalsBase::getProxAlrm     (       uw& x){return notImplemented;}
-//t_status CalsBase::setVddAlrm      (const  uw  x){return notImplemented;}
-//t_status CalsBase::getVddAlrm      (       uw& x){return notImplemented;}
-//
-//	// ___________
-//	// 29036 Stubs
-//	// ===========
-//
-//t_status CalsBase::setProxGain38(const  uw  x){return notImplemented;}
-//t_status CalsBase::getProxGain38(       uw& x){return notImplemented;}
-//
-//#if ( _DEBUG || _INCTRIM ) // 29038 trim
-//t_status CalsBase::setProxTrim      (const  uw  x){return notImplemented;}
-//t_status CalsBase::getProxTrim      (       uw& x){return notImplemented;}
-//t_status CalsBase::setIrdrTrim      (const  uw  x){return notImplemented;}
-//t_status CalsBase::getIrdrTrim      (       uw& x){return notImplemented;}
-//t_status CalsBase::setAlsTrim       (const  uw  x){return notImplemented;}
-//t_status CalsBase::getAlsTrim       (       uw& x){return notImplemented;}
-//
-//t_status CalsBase::setRegOtpSel     (const  uw  x){return notImplemented;}
-//t_status CalsBase::getRegOtpSel     (       uw& x){return notImplemented;}
-//t_status CalsBase::setOtpData       (const  uw  x){return notImplemented;}
-//t_status CalsBase::getOtpData       (       uw& x){return notImplemented;}
-//t_status CalsBase::setFuseWrEn      (const  uw  x){return notImplemented;}
-//t_status CalsBase::getFuseWrEn      (       uw& x){return notImplemented;}
-//t_status CalsBase::setFuseWrAddr    (const  uw  x){return notImplemented;}
-//t_status CalsBase::getFuseWrAddr    (       uw& x){return notImplemented;}
-//
-//t_status CalsBase::getOptDone       (       uw& x){return notImplemented;}
-//t_status CalsBase::setIrdrDcPulse   (const  uw  x){return notImplemented;}
-//t_status CalsBase::getIrdrDcPulse   (       uw& x){return notImplemented;}
-//t_status CalsBase::getGolden        (       uw& x){return notImplemented;}
-//t_status CalsBase::setOtpRes        (const  uw  x){return notImplemented;}
-//t_status CalsBase::getOtpRes        (       uw& x){return notImplemented;}
-//t_status CalsBase::setIntTest       (const  uw  x){return notImplemented;}
-//t_status CalsBase::getIntTest       (       uw& x){return notImplemented;}
-//#endif
-//
-//	// _________
-//	// RGB Stubs
-//	// =========
-//
-//t_status CalsBase::getRed(      dbl& x){return notImplemented;}
-//t_status CalsBase::getGreen(    dbl& x){return notImplemented;}
-//t_status CalsBase::getBlue(     dbl& x){return notImplemented;}
-//t_status CalsBase::getCCT(      dbl& x){return notImplemented;}
-//t_status CalsBase::setRgbCoeffEnable(const uw  x){return notImplemented;}
-//t_status CalsBase::getRgbCoeffEnable(uw&       x){return notImplemented;}
-//t_status CalsBase::loadRgbCoeff(dbl* x){return notImplemented;}
-//t_status CalsBase::clearRgbCoeff()     {return notImplemented;}
-//	// RGB test modes
-//t_status CalsBase::enable4x(const uw  x){return notImplemented;}
-//t_status CalsBase::enable8bit(const uw  x){return notImplemented;}
-//
-//	// New 177 
-//t_status CalsBase::setPrxRngOffCmpEn(const uw  x){return notImplemented;}
-//t_status CalsBase::getPrxRngOffCmpEn(      uw& x){return notImplemented;}
-//t_status CalsBase::setIrdrMode(const uw  x){return notImplemented;}
-//t_status CalsBase::getIrdrMode(      uw& x){return notImplemented;}

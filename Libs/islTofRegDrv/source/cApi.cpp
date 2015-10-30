@@ -5,7 +5,7 @@
 #endif
 
 #include "ALSbaseClass.h"
-#include "analogControlRegisters.h"
+#include "analogControl.h"
 #include "alsPrxI2cIo.h"
 #include "cApi.h"
 
@@ -15,11 +15,15 @@ DLLAPI CalsBase* pCalsBase=NULL;
 CAPI cSetDrvApi(ul (fpApi *pF)(ul,ul,uw*,ul))  {pCalsBase->setDrvApi(pF);return pCalsBase->initDriver();}
 
 // analogControlRegisters
-CAPI getIRDR(dbl* irdr)       {return pCalsBase->analogControlRegisters->getIRDR(*irdr);}
-CAPI setIRDR(dbl irdr)        {return pCalsBase->analogControlRegisters->setIRDR(irdr);}
-CAPI getAFEgain(uw* gain)     {return pCalsBase->analogControlRegisters->getAFEgain(*gain);}
-CAPI setAFEgain(const uw gain){return pCalsBase->analogControlRegisters->setAFEgain(gain);}
+CAPI getIRDR(dbl* irdr)       {return pCalsBase->analogControl->getIRDR(*irdr);}
+CAPI setIRDR(dbl irdr)        {return pCalsBase->analogControl->setIRDR(irdr);}
+CAPI getAFEgain(uw* gain)     {return pCalsBase->analogControl->getAFEgain(*gain);}
+CAPI setAFEgain(const uw gain){return pCalsBase->analogControl->setAFEgain(gain);}
 
+// status
+CAPI status_getChip_id(uw* chip_id){return pCalsBase->status->getChip_id(*chip_id);}
+CAPI status_getC_en(uw* c_en){return pCalsBase->status->getC_en(*c_en);}
+CAPI status_setC_en(uw c_en){return pCalsBase->status->setC_en(c_en);}
 
 //openLoopCorrectionRegisters
 CAPI getPhaseOffsetAmbientCoef(dbl* c1,dbl* c2)                   {return pCalsBase->getPhaseOffsetAmbientCoef(*c1,*c1);}
@@ -27,6 +31,8 @@ CAPI setPhaseOffsetAmbientCoef(const dbl c1,const dbl c2)         {return pCalsB
 CAPI getPhaseOffsetVGAcoef(const uw vga,dbl* c1,dbl* c2)          {return pCalsBase->getPhaseOffsetVGAcoef(vga,*c1,*c1);}
 CAPI setPhaseOffsetVGAcoef(const uw vga,const dbl c1,const dbl c2){return pCalsBase->setPhaseOffsetVGAcoef(vga,c1,c2);}
 
+//lightSampleStatusRegisters
+CAPI getDistance(dbl* c1)                   {return pCalsBase->lightSampleStatus->getDistance(*c1);}
 
 
 
@@ -36,6 +42,10 @@ CAPI cGetStats(uw c,double *m, double *s) {return pCalsBase->getStats(c,*m,*s);}
 
 CAPI cWriteField(uw addr,uc shift,uc mask,uc data) {return pCalsBase->m_pIO->write(addr,shift,mask,data);}
 CAPI cReadField(uw addr,uc shift,uc mask,uc* data) {return pCalsBase->m_pIO->read(addr,shift,mask,*data);}
+CAPI cWriteByte(uw addr,uc data) {return pCalsBase->m_pIO->write(addr,data);}
+CAPI cReadByte(uw addr,uc* data) {return pCalsBase->m_pIO->read(addr,*data);}
+CAPI cWriteWord(uw addr,uw data) {return pCalsBase->m_pIO->write(addr,data);}
+CAPI cReadWord(uw addr,uw* data) {return pCalsBase->m_pIO->read(addr,*data);}
 
 
 CAPI cSetIOintEn      (uw x)
@@ -90,4 +100,4 @@ CAPI strcpy_(char oVarPtr[],char iVarPtr[])
 	return (t_status)0;
 }
 
-//#endif
+#include "..\autoGen.cpp\cApi.cpp"

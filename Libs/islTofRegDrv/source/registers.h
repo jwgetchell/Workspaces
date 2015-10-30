@@ -21,7 +21,7 @@ public:
 	long read();
 	void write(const uw);
 
-	long byteSwap(uw);
+	//long byteSwap(uw);
 	const uw addr;
 	const uc shift;
 	const uw mask;
@@ -79,7 +79,7 @@ public:
 	//class CdebuggingRegisters               {	}debuggingRegisters;
 #else
 
-#include "..\excelVBA\autoGen\registers.h"
+#include "..\autoGen.cpp\registers.h"
 
 #endif
 
